@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+   <head>
+      <title>Scoreboard Configurator</title>
+   </head>
+   <body>
+      <h1>Scoreboard Configurator</h1>
+      <form action = "/reboot" method = "post"><input type = "submit" value = "Reboot" /></form>
+      <form action = "/save" method = "post">
+         <p><label for="state">Status:</label>
+            <input type="radio" id="on" name="state" value="1" {{'checked' if data.state == '1' else ''}} />ON
+            <input type="radio" id="off" name="state" value="0" {{'checked' if data.state == '0' else ''}} />OFF
+         </p>
+         <p><label for="team">Team:</label>
+            <select name = "team">
+               <option value="all" >All</option>
+               {%for key in teams %} 
+
+                  <option value="{{teams[key]}}" {{'selected' if teams[key] == data.team}}>{{teams[key]}}</option> 
+               {%endfor%} 
+            </select>
+            
+         </p>
+         <p><label for="live_score_type">Live Score Type:</label><input type = "live_score_type" name = "live_score_type" value="{{ data.live_score_type }}"/></p>
+         <p><label for="weather_api_key">Weather API Key:</label><input type = "text" name = "weather_api_key" value="{{ data.weather_api_key }}"/></p>
+         <p><label for="weather_api_units">Weather API Units:</label><input type = "text" name = "weather_api_units" value="{{ data.weather_api_units }}"/></p>
+         <p><label for="weather_location">Weather Location:</label><input type = "text" name = "weather_location" value="{{ data.weather_location }}"/></p>
+         <p><input type = "submit" value = "submit" /></p>
+      </form>
+   </body>
+</html>
