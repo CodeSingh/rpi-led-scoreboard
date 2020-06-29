@@ -35,6 +35,7 @@ def save():
       config['state'] = request.form['state']
       config['team'] = request.form['team']
       config['weather_location'] = request.form['weather_location']
+      config['live_score_type'] = request.form['live_score_type']
       set_config(config)
 
    return redirect(url_for('index'))
