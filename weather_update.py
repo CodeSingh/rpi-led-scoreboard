@@ -6,7 +6,7 @@ import os.path
 from PIL import Image
      
 def get_config():
-    PATH_TO_CONFIG_JSON = '/home/pi/scoreboard/config.json' 
+    PATH_TO_CONFIG_JSON = '/home/pi/rpi-led-scoreboard/config.json' 
     with open(PATH_TO_CONFIG_JSON,'r') as jsonfile:
         json_content = json.load(jsonfile)
         return json_content
@@ -35,9 +35,9 @@ def get_icon(url, dest_file):
 
 def main():
 
-    PATH_TO_WEATHER_JSON = '/home/pi/scoreboard/weather.json'
+    PATH_TO_WEATHER_JSON = '/home/pi/rpi-led-scoreboard/weather.json'
     URL_ICON = "http://openweathermap.org/img/w/{0}.png"
-    PATH_ICON = "/home/pi/scoreboard/img/weather/icons/{0}.png"
+    PATH_ICON = "/home/pi/rpi-led-scoreboard/img/weather/icons/{0}.png"
 
     config = get_config()
     location = config['weather_location']
