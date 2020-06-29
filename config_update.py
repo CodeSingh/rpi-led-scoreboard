@@ -11,7 +11,7 @@ from livescore_manager import LivescoreManager
 import score_update
 import weather_update
 
-PATH_TO_CONFIG_JSON = '/home/pi/scoreboard/config.json' 
+PATH_TO_CONFIG_JSON = '/home/pi/rpi-led-scoreboard/config.json' 
 
 def clear_term():
     os.system('cls' if os.name == 'nt' else 'clear')

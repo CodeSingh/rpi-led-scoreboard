@@ -1,3 +1,3 @@
 #!/bin/bash
-/usr/bin/python3 /home/pi/scoreboard/score_update.py
-/usr/bin/python3 /home/pi/scoreboard/weather_update.py
+/usr/bin/python3 /home/pi/rpi-led-scoreboard/score_update.py
+/usr/bin/python3 /home/pi/rpi-led-scoreboard/weather_update.py

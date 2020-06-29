@@ -5,7 +5,7 @@ import constants as c
 from livescore_manager import LivescoreManager
 
 def get_config():
-    PATH_TO_CONFIG_JSON = '/home/pi/scoreboard/config.json' 
+    PATH_TO_CONFIG_JSON = '/home/pi/rpi-led-scoreboard/config.json' 
     with open(PATH_TO_CONFIG_JSON,'r') as jsonfile:
         json_content = json.load(jsonfile)
         return json_content
@@ -19,7 +19,7 @@ def main():
     
 def all_matches(live_score_type):
     ALL_TEAMS = "all"
-    PATH_TO_ALL_MATCHES_JSON = '/home/pi/scoreboard/matches.json'
+    PATH_TO_ALL_MATCHES_JSON = '/home/pi/rpi-led-scoreboard/matches.json'
 
     livescore = LivescoreManager()
     livescore_class = livescore.get_live_score_class(live_score_type, ALL_TEAMS)
@@ -35,7 +35,7 @@ def all_matches(live_score_type):
         json.dump(json_content, jsonfile, indent=4) # you decide the indentation level
 
 def single_match(live_score_type, team):
-    PATH_TO_MATCH_JSON = '/home/pi/scoreboard/match.json' 
+    PATH_TO_MATCH_JSON = '/home/pi/rpi-led-scoreboard/match.json' 
     
     livescore = LivescoreManager()
     livescore_class = livescore.get_live_score_class(live_score_type, team)
