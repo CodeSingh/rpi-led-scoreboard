@@ -9,6 +9,7 @@ from datetime import datetime
 from samplebase import SampleBase
 from rgbmatrix import RGBMatrix, RGBMatrixOptions, graphics
 from PIL import Image
+import logging
 #4x6.bdf
 class RunScoreboard(SampleBase):
     def __init__(self, *args, **kwargs):
@@ -120,12 +121,18 @@ class RunScoreboard(SampleBase):
                         graphics.DrawText(matrix, fontStatus, 17, 22, green, "{0}".format(match_start_time) )
                     else:
                         graphics.DrawText(matrix, fontStatus, 26, 22, green, "{0}".format(match_status) )
-            
-                    time.sleep(30)
+                    
+            time.sleep(30)
 
 # Main function
 if __name__ == "__main__":
-    run_scoreboard = RunScoreboard()
-    if (not run_scoreboard.process()):
-        run_scoreboard.print_help()
+    logging.basicConfig(filename='/home/pi/rpi-led-scoreboard/scoreboard.log', level=logging.INFO)
+    logging.info('Started')
+    try:
+        run_scoreboard = RunScoreboard()
+        if (not run_scoreboard.process()):
+            run_scoreboard.print_help()
+    except Exception as e:
+        logging.error(str(e))
+    logging.info('Finished')
 

@@ -6,9 +6,12 @@ from flask import Flask, render_template, request, redirect, url_for
 import datetime
 import json
 import os
+import time
+import sys
+sys.path.append('/home/pi/rpi-led-scoreboard/')
 from config_update import get_config, set_config
 import constants as c
-import time
+
 
 app = Flask(__name__)
 @app.route("/")
