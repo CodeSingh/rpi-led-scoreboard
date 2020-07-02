@@ -1,10 +1,18 @@
 [
     {
-        "team-home": "Brighton & Hove Albion",
-        "team-away": "Manchester United",
+        "team-home": "Sheffield United",
+        "team-away": "Tottenham Hotspur",
         "score-home": "0",
-        "score-away": "3",
-        "status": "FT",
-        "start-time": ""
+        "score-away": "0",
+        "status": "",
+        "start-time": "18:00"
+    },
+    {
+        "team-home": "Manchester City",
+        "team-away": "Liverpool",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "20:15"
     }
 ]

@@ -49,14 +49,17 @@ if __name__ == "__main__":
         current_competition = 0
         livescore = LivescoreManager()
         competitions = livescore.get_competitions()
-        for key, value in enumerate(competitions):
-            print(key, '->', value)
+        
+        inc = 0
+        for competition in competitions:
+            print(str(inc) + " -> " + competition.Name)
             if(value == config["live_score_type"]):
-                current_competition = key
+                current_competition = inc
+            inc = inc + 1
 
         competition_no = int(input("Choose competition\nCurrent:[" + config["live_score_type"] + "]:") or current_competition)
         print(competitions[competition_no])
-        config["live_score_type"] = competitions[competition_no]
+        config["live_score_type"] = competitions[competition_no].ID
 
         config["weather_location"] = input("Enter your location (for weather display)\nCurrent:[" + config["weather_location"] + "]:") or config["weather_location"]
         

@@ -8,32 +8,33 @@
             "id": 803,
             "main": "Clouds",
             "description": "broken clouds",
-            "icon": "04n"
+            "icon": "04d"
         }
     ],
     "base": "stations",
     "main": {
-        "temp": 13.69,
-        "feels_like": 13.86,
-        "temp_min": 13.33,
-        "temp_max": 14.44,
-        "pressure": 1003,
-        "humidity": 94
+        "temp": 10.19,
+        "feels_like": 6.72,
+        "temp_min": 10,
+        "temp_max": 10.56,
+        "pressure": 1009,
+        "humidity": 100
     },
+    "visibility": 7000,
     "wind": {
-        "speed": 0.97,
-        "deg": 295
+        "speed": 5.1,
+        "deg": 10
     },
     "clouds": {
-        "all": 72
+        "all": 75
     },
-    "dt": 1593554629,
+    "dt": 1593675933,
     "sys": {
-        "type": 3,
-        "id": 2009191,
+        "type": 1,
+        "id": 1423,
         "country": "GB",
-        "sunrise": 1593488406,
-        "sunset": 1593549665
+        "sunrise": 1593661296,
+        "sunset": 1593722417
     },
     "timezone": 3600,
     "id": 2654993,

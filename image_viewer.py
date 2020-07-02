@@ -10,7 +10,7 @@ from samplebase import SampleBase
 from rgbmatrix import RGBMatrix, RGBMatrixOptions, graphics
 from PIL import Image
 import logging
-#4x6.bdf
+
 class RunScoreboard(SampleBase):
     def __init__(self, *args, **kwargs):
         super(RunScoreboard, self).__init__(*args, **kwargs)
@@ -83,7 +83,6 @@ class RunScoreboard(SampleBase):
                 time.sleep(60)
 
             else:
-
                 for fixture in data:
                     matrix.Clear()
                     text_team_home = fixture['team-home']
@@ -122,7 +121,7 @@ class RunScoreboard(SampleBase):
                     else:
                         graphics.DrawText(matrix, fontStatus, 26, 22, green, "{0}".format(match_status) )
                     
-            time.sleep(30)
+                    time.sleep(30)
 
 # Main function
 if __name__ == "__main__":

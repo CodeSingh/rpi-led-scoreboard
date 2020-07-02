@@ -11,12 +11,15 @@ import sys
 sys.path.append('/home/pi/rpi-led-scoreboard/')
 from config_update import get_config, set_config
 import constants as c
+from livescore_manager import LivescoreManager
 
 
 app = Flask(__name__)
 @app.route("/")
 def index():
-   model_index = { "teams" : c.DICT_TEAMS, "data" : get_config() }
+   livescore = LivescoreManager()
+   competitions = livescore.get_competitions()
+   model_index = { "teams" : c.DICT_TEAMS, "competitions": competitions, "data" : get_config() }
 
    print(model_index)
    return render_template('index.html', **model_index)
@@ -25,7 +28,7 @@ def index():
 def reboot():
    if request.method == 'POST':
       os.system('sudo reboot')
-      time.sleep(10)
+      time.sleep(5)
       return redirect(url_for('index'))
    #else:
    #   user = request.args.get('nm')

@@ -7,6 +7,7 @@ from .livescore import Livescore
 class BBC_EPL_Livescore(Livescore):
 
     ID = "BBC_FAC"
+    NAME = "BBC English FA Cup"
 
     def __init__(self, team):
         self.team = team

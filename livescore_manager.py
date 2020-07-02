@@ -8,7 +8,7 @@ class LivescoreManager:
     def get_competitions(self): 
         competitions = []
         for cls in livescore.Livescore.__subclasses__():
-            competitions.append(cls.ID)
+            competitions.append({"ID" : cls.ID, "Name" : cls.NAME})
         return competitions
 
     
