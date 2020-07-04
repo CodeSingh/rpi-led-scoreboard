@@ -125,7 +125,7 @@ class RunScoreboard(SampleBase):
 
 # Main function
 if __name__ == "__main__":
-    logging.basicConfig(filename='/home/pi/rpi-led-scoreboard/scoreboard.log', level=logging.INFO)
+    logging.basicConfig(filename='/home/pi/rpi-led-scoreboard/scoreboard.log', format='%(asctime)s  %(name)s  %(levelname)s: %(message)s', level=logging.INFO)
     logging.info('Started')
     try:
         run_scoreboard = RunScoreboard()

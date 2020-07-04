@@ -4,6 +4,7 @@ import requests
 import sys
 import os.path
 from PIL import Image
+import logging
      
 def get_config():
     PATH_TO_CONFIG_JSON = '/home/pi/rpi-led-scoreboard/config.json' 
@@ -56,4 +57,10 @@ def main():
         json.dump(weather , jsonfile, indent=4) # you decide the indentation level     
  
 if __name__ == '__main__':
-    main()
+    logging.basicConfig(filename='/home/pi/rpi-led-scoreboard/weather.log', format='%(asctime)s  %(name)s  %(levelname)s: %(message)s', level=logging.INFO)
+    logging.info('Started')
+    try:
+        main()
+    except Exception as e:
+        logging.error(str(e))
+    logging.info('Finished')

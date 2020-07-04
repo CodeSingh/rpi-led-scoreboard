@@ -42,6 +42,9 @@ def save():
       config['team'] = request.form['team']
       config['weather_location'] = request.form['weather_location']
       config['live_score_type'] = request.form['live_score_type']
+      config['weather_api_key'] = request.form['weather_api_key']
+
+      
       set_config(config)
 
    return redirect(url_for('index'))
