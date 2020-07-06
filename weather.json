@@ -1,4 +1,43 @@
 {
-    "cod": 401,
-    "message": "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."
+    "coord": {
+        "lon": -1.75,
+        "lat": 53.79
+    },
+    "weather": [
+        {
+            "id": 801,
+            "main": "Clouds",
+            "description": "few clouds",
+            "icon": "02d"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 14.82,
+        "feels_like": 7.95,
+        "temp_min": 14.44,
+        "temp_max": 15,
+        "pressure": 1020,
+        "humidity": 58
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 8.7,
+        "deg": 270
+    },
+    "clouds": {
+        "all": 20
+    },
+    "dt": 1594060032,
+    "sys": {
+        "type": 1,
+        "id": 1423,
+        "country": "GB",
+        "sunrise": 1594007112,
+        "sunset": 1594067882
+    },
+    "timezone": 3600,
+    "id": 2654993,
+    "name": "Bradford",
+    "cod": 200
 }

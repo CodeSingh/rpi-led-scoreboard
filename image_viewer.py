@@ -10,6 +10,7 @@ from samplebase import SampleBase
 from rgbmatrix import RGBMatrix, RGBMatrixOptions, graphics
 from PIL import Image
 import logging
+from logging import handlers
 
 class RunScoreboard(SampleBase):
     def __init__(self, *args, **kwargs):
@@ -125,7 +126,14 @@ class RunScoreboard(SampleBase):
 
 # Main function
 if __name__ == "__main__":
-    logging.basicConfig(filename='/home/pi/rpi-led-scoreboard/scoreboard.log', format='%(asctime)s  %(name)s  %(levelname)s: %(message)s', level=logging.INFO)
+    logging.basicConfig(format='%(asctime)s  %(name)s  %(levelname)s: %(message)s', 
+                        level=logging.INFO,
+                        handlers=[
+                            handlers.RotatingFileHandler(
+                                    '/home/pi/rpi-led-scoreboard/scoreboard.log',
+                                    maxBytes=10240, backupCount=3)
+                        ]
+                        )
     logging.info('Started')
     try:
         run_scoreboard = RunScoreboard()

@@ -1,39 +1,7 @@
 [
     {
-        "team-home": "Norwich City",
-        "team-away": "Brighton & Hove Albion",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "12:30"
-    },
-    {
-        "team-home": "Leicester City",
-        "team-away": "Crystal Palace",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "15:00"
-    },
-    {
-        "team-home": "Manchester United",
-        "team-away": "AFC Bournemouth",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "15:00"
-    },
-    {
-        "team-home": "Wolverhampton Wanderers",
-        "team-away": "Arsenal",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "17:30"
-    },
-    {
-        "team-home": "Chelsea",
-        "team-away": "Watford",
+        "team-home": "Tottenham Hotspur",
+        "team-away": "Everton",
         "score-home": "0",
         "score-away": "0",
         "status": "",

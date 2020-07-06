@@ -3,6 +3,8 @@ import sys
 import json
 import constants as c
 from livescore_manager import LivescoreManager
+import logging
+from logging import handlers
 
 def get_config():
     PATH_TO_CONFIG_JSON = '/home/pi/rpi-led-scoreboard/config.json' 
@@ -56,4 +58,16 @@ def single_match(live_score_type, team):
         json.dump(json_content, jsonfile, indent=4) # you decide the indentation level
 
 if __name__ == "__main__":
-    main()
+    logging.basicConfig(format='%(asctime)s  %(name)s  %(levelname)s: %(message)s', level=logging.INFO,
+                        handlers=[
+                            handlers.RotatingFileHandler(
+                                    '/home/pi/rpi-led-scoreboard/score.log',
+                                    maxBytes=10240, backupCount=3)
+                        ]
+                        )
+    logging.info('Started')
+    try:
+        main()
+    except Exception as e:
+        logging.error(str(e))
+    logging.info('Finished')
