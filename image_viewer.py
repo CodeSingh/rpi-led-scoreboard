@@ -4,6 +4,7 @@ import time
 import sys
 import json
 import os.path
+import constants as c 
 
 from datetime import datetime
 from samplebase import SampleBase
@@ -46,33 +47,38 @@ class RunScoreboard(SampleBase):
                 data = [x for x in data if x["team-home"] == config['team'] or x["team-away"] == config['team']]
 
             if(len(data) == 0): # No matches today
-                with open(WEATHER_JSON) as json_file:
-                    weather = json.load(json_file)
+                if( os.path.getsize(WEATHER_JSON) > 0):
+                    try:
+                        with open(WEATHER_JSON) as json_file:
+                            weather = json.load(json_file)
 
-                if 'main' in weather:
-                    # Icon
-                    weather_icon = "/home/pi/rpi-led-scoreboard/img/weather/icons/" + weather['weather'][0]['icon'] + ".png"
-                    if os.path.isfile(weather_icon):
-                        try:
-                            image_weather_icon = Image.open(weather_icon)
-                            matrix.SetImage(image_weather_icon.convert('RGB'), 0, 8)
-                        except OSError:
-                            print('OS error')
-                        except:
-                            print('Image error')
-                    # Temp
-                    fontTemp = graphics.Font()
-                    fontTemp.LoadFont("/home/pi/rpi-led-scoreboard/fonts/5x7.bdf")
-                    yellow = graphics.Color(255, 255, 0)
-                    temp = str(int(weather['main']['temp'])) + '\'C' 
-                    graphics.DrawText(matrix, fontTemp, 40, 14, yellow, temp)
+                        if 'main' in weather:
+                            # Icon
+                            weather_icon = "/home/pi/rpi-led-scoreboard/img/weather/icons/" + weather['weather'][0]['icon'] + ".png"
+                            if os.path.isfile(weather_icon):
+                                try:
+                                    image_weather_icon = Image.open(weather_icon)
+                                    matrix.SetImage(image_weather_icon.convert('RGB'), 0, 8)
+                                except OSError:
+                                    print('OS error')
+                                except:
+                                    print('Image error')
+                                # Temp
+                                fontTemp = graphics.Font()
+                                fontTemp.LoadFont("/home/pi/rpi-led-scoreboard/fonts/5x7.bdf")
+                                yellow = graphics.Color(255, 255, 0)
+                                temp = str(int(weather['main']['temp'])) + c.DICT_TEMP_TYPES[config["weather_api_units"]] 
+                                graphics.DrawText(matrix, fontTemp, 40, 14, yellow, temp)
 
-                    # Conditions
-                    fontConditions = graphics.Font()
-                    fontConditions.LoadFont("/home/pi/rpi-led-scoreboard/fonts/6x13B.bdf")
-                    yellow = graphics.Color(255, 255, 0)
-                    weather_conditions = weather['weather'][0]['main']
-                    graphics.DrawText(matrix, fontConditions, 0, 10, yellow, weather_conditions)
+                                # Conditions
+                                fontConditions = graphics.Font()
+                                fontConditions.LoadFont("/home/pi/rpi-led-scoreboard/fonts/6x13B.bdf")
+                                yellow = graphics.Color(255, 255, 0)
+                                weather_conditions = weather['weather'][0]['main']
+                                graphics.DrawText(matrix, fontConditions, 0, 10, yellow, weather_conditions)
+                    except Exception as e:
+                        logging.error(str(e))
+                    
 
                 # Time
                 fontTime = graphics.Font()

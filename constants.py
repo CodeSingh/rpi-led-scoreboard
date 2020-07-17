@@ -5,3 +5,4 @@ DICT_TEAMS = {1: 'Arsenal', 2: 'Aston Villa', 3: 'Bournemouth',
 13: 'Newcastle United', 14: 'Norwich City', 15: 'Sheffield United', 
 16: 'Southampton', 17: 'Tottenham Hotspur', 18: 'Watford', 
 19: 'West Ham United', 20: 'Wolverhampton Wanderers'}
+DICT_TEMP_TYPES = {"metric": "'C", "imperial": "'F" }

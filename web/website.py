@@ -19,7 +19,7 @@ app = Flask(__name__)
 def index():
    livescore = LivescoreManager()
    competitions = livescore.get_competitions()
-   model_index = { "teams" : c.DICT_TEAMS, "competitions": competitions, "data" : get_config() }
+   model_index = { "teams" : c.DICT_TEAMS, "competitions": competitions, "data" : get_config(), "temp_types": c.DICT_TEMP_TYPES}
 
    print(model_index)
    return render_template('index.html', **model_index)
@@ -43,6 +43,7 @@ def save():
       config['weather_location'] = request.form['weather_location']
       config['live_score_type'] = request.form['live_score_type']
       config['weather_api_key'] = request.form['weather_api_key']
+      config['weather_api_units'] = request.form['weather_api_units']
 
       
       set_config(config)
