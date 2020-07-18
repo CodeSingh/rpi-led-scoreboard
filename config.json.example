@@ -1,0 +1,10 @@
+{
+    "weather_api_key": "XXX",
+    "weather_api_img_url": "http://openweathermap.org/img/w/{0}.png",
+    "state": "1",
+    "weather_api_units": "metric",
+    "weather_location": "Bradford, UK",
+    "weather_api_url": "https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}&units={2}",
+    "live_score_type": "BBC_EPL",
+    "team": "Manchester United"
+}
