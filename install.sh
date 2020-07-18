@@ -1,22 +1,20 @@
 #!/bin/bash
-apt-get install git -y
-apt-get install python3-pil -y
-apt-get install python-bs4 -y # or is it python3
+sudo apt-get install python3-pil -y
+sudo apt-get install python3-bs4 -y
+sudo apt-get install python3-flask -y
 
-git clone -C /home/pi/ https://github.com/hzeller/rpi-rgb-led-matrix.git
-git clone -C /home/pi/ https://github.com/CodeSingh/rpi-led-scoreboard.git
+cd /home/pi/
+git clone https://github.com/hzeller/rpi-rgb-led-matrix.git # Not sudo so that changes can be made easily after install
 
-cd /home/pi/rpi-rgb-led-matrix/bindings/python/
+cd /home/pi/rpi-rgb-led-matrix/
 sudo apt-get update && sudo apt-get install python3-dev python3-pillow -y
-make build-python PYTHON=$(which python3)
+sudo make build-python PYTHON=$(which python3)
 sudo make install-python PYTHON=$(which python3)
 
 cd /home/pi/rpi-led-scoreboard/
+cp config.json.example config.json
 sudo crontab cronjobs.txt
 
-
-
-
-
-
-
+cd /etc/modprobe.d/
+sudo touch raspi-blacklist.conf
+sudo sh -c " echo 'blacklist snd_bcm2835' >> raspi-blacklist.conf"
