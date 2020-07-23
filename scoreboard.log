@@ -30,3 +30,8 @@ INFO:root:Started
 2020-07-12 15:59:58,122  root  INFO: Started
 2020-07-14 14:45:42,154  root  INFO: Started
 2020-07-16 17:55:13,992  root  INFO: Started
+2020-07-18 18:01:30,360  root  INFO: Started
+2020-07-22 20:17:36,356  root  ERROR: Expecting value: line 1 column 1 (char 0)
+2020-07-22 20:17:36,415  root  INFO: Finished
+2020-07-22 21:30:53,311  root  INFO: Started
+2020-07-23 19:17:24,945  root  INFO: Started

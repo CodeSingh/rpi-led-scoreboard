@@ -35,13 +35,24 @@ class RunScoreboard(SampleBase):
             matrix.Clear()
 
             with open('/home/pi/rpi-led-scoreboard/config.json') as json_file:
-                config = json.load(json_file)
-                if config['state'] == "0":
-                    time.sleep(60)
-                    continue
+                try:
+                    config = json.load(json_file)
+                    if config['state'] == "0":
+                        time.sleep(60)
+                        continue
+                except ValueError as e:
+                    break
+
 
             with open('/home/pi/rpi-led-scoreboard/matches.json') as json_file:
-                data = json.load(json_file)
+                try:
+                    data = json.load(json_file)
+                    if config['state'] == "0":
+                        time.sleep(60)
+                        continue
+                except ValueError as e:
+                    break
+
             
             if(config["team"] != ALL_TEAMS): # pick out team if specified
                 data = [x for x in data if x["team-home"] == config['team'] or x["team-away"] == config['team']]
