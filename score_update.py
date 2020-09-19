@@ -66,8 +66,8 @@ if __name__ == "__main__":
                         ]
                         )
     logging.info('Started')
-    try:
-        main()
-    except Exception as e:
-        logging.error(str(e))
+    #try:
+    main()
+    #except Exception as e:
+    #    logging.error(str(e))
     logging.info('Finished')

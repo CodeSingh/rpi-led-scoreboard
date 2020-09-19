@@ -1,82 +1,34 @@
 [
     {
-        "team-home": "Arsenal",
-        "team-away": "Watford",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "16:00"
-    },
-    {
-        "team-home": "Burnley",
-        "team-away": "Brighton & Hove Albion",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "16:00"
-    },
-    {
-        "team-home": "Chelsea",
-        "team-away": "Wolverhampton Wanderers",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "16:00"
-    },
-    {
-        "team-home": "Crystal Palace",
-        "team-away": "Tottenham Hotspur",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "16:00"
-    },
-    {
         "team-home": "Everton",
-        "team-away": "AFC Bournemouth",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "16:00"
+        "team-away": "West Bromwich Albion",
+        "score-home": "5",
+        "score-away": "2",
+        "status": "FT",
+        "start-time": ""
     },
     {
-        "team-home": "Leicester City",
-        "team-away": "Manchester United",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "16:00"
+        "team-home": "Leeds United",
+        "team-away": "Fulham",
+        "score-home": "2",
+        "score-away": "1",
+        "status": "HT",
+        "start-time": ""
     },
     {
-        "team-home": "Manchester City",
-        "team-away": "Norwich City",
+        "team-home": "Manchester United",
+        "team-away": "Crystal Palace",
         "score-home": "0",
         "score-away": "0",
         "status": "",
-        "start-time": "16:00"
+        "start-time": "17:30"
     },
     {
-        "team-home": "Newcastle United",
-        "team-away": "Liverpool",
+        "team-home": "Arsenal",
+        "team-away": "West Ham United",
         "score-home": "0",
         "score-away": "0",
         "status": "",
-        "start-time": "16:00"
-    },
-    {
-        "team-home": "Southampton",
-        "team-away": "Sheffield United",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "16:00"
-    },
-    {
-        "team-home": "West Ham United",
-        "team-away": "Aston Villa",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "16:00"
+        "start-time": "20:00"
     }
 ]

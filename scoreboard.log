@@ -35,3 +35,49 @@ INFO:root:Started
 2020-07-22 20:17:36,415  root  INFO: Finished
 2020-07-22 21:30:53,311  root  INFO: Started
 2020-07-23 19:17:24,945  root  INFO: Started
+2020-07-25 17:41:01,228  root  INFO: Started
+2020-07-29 21:02:14,360  root  INFO: Finished
+2020-07-30 18:28:12,025  root  INFO: Started
+2020-08-11 06:01:55,719  root  ERROR: Expecting value: line 1 column 1 (char 0)
+2020-08-20 10:49:30,948  root  ERROR: Expecting value: line 1 column 1 (char 0)
+2020-08-20 10:49:31,046  root  INFO: Finished
+2020-09-15 21:09:34,967  root  INFO: Started
+2020-09-15 22:43:57,140  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/02n.png'
+2020-09-16 03:30:50,252  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04n.png'
+2020-09-16 11:23:50,909  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04d.png'
+2020-09-16 13:08:50,583  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04d.png'
+2020-09-16 16:06:50,124  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04d.png'
+2020-09-16 17:27:50,474  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04d.png'
+2020-09-16 18:03:49,066  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04d.png'
+2020-09-17 00:02:49,794  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04n.png'
+2020-09-17 03:30:50,136  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04n.png'
+2020-09-17 04:51:50,062  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04n.png'
+2020-09-17 05:18:50,002  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04n.png'
+2020-09-17 05:36:49,843  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04n.png'
+2020-09-17 06:39:49,972  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/02n.png'
+2020-09-17 15:09:50,337  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/01d.png'
+2020-09-17 19:46:49,812  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04n.png'
+2020-09-17 22:10:49,648  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04n.png'
+2020-09-18 05:11:50,427  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/03n.png'
+2020-09-18 06:47:50,434  root  ERROR: Expecting value: line 1 column 1 (char 0)
+2020-09-18 08:17:51,329  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04d.png'
+2020-09-18 08:34:49,516  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04d.png'
+2020-09-18 08:52:50,484  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04d.png'
+2020-09-18 11:07:51,146  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04d.png'
+2020-09-18 12:18:49,140  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/03d.png'
+2020-09-18 12:27:49,086  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/03d.png'
+2020-09-18 19:36:50,193  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/02n.png'
+2020-09-18 22:44:49,724  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04n.png'
+2020-09-19 00:04:50,312  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04n.png'
+2020-09-19 06:45:50,473  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04n.png'
+2020-09-19 09:33:20,830  root  INFO: Started
+2020-09-19 09:41:57,254  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04d.png'
+2020-09-19 09:49:50,013  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/04d.png'
+2020-09-19 11:20:50,155  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/03d.png'
+2020-09-19 12:10:08,807  root  INFO: Started
+2020-09-19 12:31:56,704  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/03d.png'
+2020-09-19 12:39:49,341  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/03d.png'
+2020-09-19 13:50:49,427  root  ERROR: cannot identify image file '/home/pi/rpi-led-scoreboard/img/weather/icons/03d.png'
+2020-09-19 14:45:22,799  root  INFO: Started
+2020-09-19 15:29:31,551  root  INFO: Started
+2020-09-19 15:37:40,625  root  INFO: Started

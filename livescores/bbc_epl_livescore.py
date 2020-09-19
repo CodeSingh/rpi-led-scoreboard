@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 from urllib.request import urlopen
 from datetime import datetime
 import time
+import requests
 from .livescore import Livescore
 
 class BBC_EPL_Livescore(Livescore):
@@ -18,7 +19,7 @@ class BBC_EPL_Livescore(Livescore):
         
         self.now = datetime.now() # current date and time
         self.url = self.LIVESCORE_URL + '?' + self.now.strftime("%Y%m%d%h%M%s")
-        self.page = urlopen(self.url)
+        self.page = requests.get(self.url)
         self.soup = BeautifulSoup(self.page.read(), "lxml")
 
         self.my_fixture = {}
@@ -81,8 +82,9 @@ class BBC_EPL_Livescore(Livescore):
         self.LIVESCORE_URL = 'https://www.bbc.co.uk/sport/football/premier-league/scores-fixtures/'
         
         self.now = datetime.now() # current date and time
-        self.url = self.LIVESCORE_URL + self.now.strftime("%Y-%m-%d")
+        self.url = self.LIVESCORE_URL + '?' + self.now.strftime("%Y-%m-%d")
         self.page = urlopen(self.url)
+        print(self.url)
         self.soup = BeautifulSoup(self.page.read(), "lxml")
 
         self.all_my_fixtures = []

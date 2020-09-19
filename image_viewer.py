@@ -41,6 +41,7 @@ class RunScoreboard(SampleBase):
                         time.sleep(60)
                         continue
                 except ValueError as e:
+                    logging.error(str(e))
                     break
 
 
@@ -51,6 +52,7 @@ class RunScoreboard(SampleBase):
                         time.sleep(60)
                         continue
                 except ValueError as e:
+                    logging.error(str(e))
                     break
 
             
@@ -70,10 +72,10 @@ class RunScoreboard(SampleBase):
                                 try:
                                     image_weather_icon = Image.open(weather_icon)
                                     matrix.SetImage(image_weather_icon.convert('RGB'), 0, 8)
-                                except OSError:
-                                    print('OS error')
-                                except:
-                                    print('Image error')
+                                except OSError as e:
+                                    logging.error(str(e))
+                                except Exception as e:
+                                    logging.error(str(e))
                                 # Temp
                                 fontTemp = graphics.Font()
                                 fontTemp.LoadFont("/home/pi/rpi-led-scoreboard/fonts/5x7.bdf")
@@ -159,4 +161,3 @@ if __name__ == "__main__":
     except Exception as e:
         logging.error(str(e))
     logging.info('Finished')
-
