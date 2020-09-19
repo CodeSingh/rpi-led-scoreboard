@@ -76,7 +76,7 @@ class BBC_EPL_Livescore(Livescore):
         self.LIVESCORE_URL = 'https://www.bbc.co.uk/sport/football/fa-cup/scores-fixtures/'
         
         self.now = datetime.now() # current date and time
-        self.url = self.LIVESCORE_URL + self.now.strftime("%Y-%m-%d")
+        self.url = self.LIVESCORE_URL + '?' + self.now.strftime("%Y-%m-%d")
         self.page = urlopen(self.url)
         self.soup = BeautifulSoup(self.page.read(), "lxml")
 
