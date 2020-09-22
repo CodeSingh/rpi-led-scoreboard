@@ -1,34 +1,82 @@
 [
     {
-        "team-home": "Everton",
-        "team-away": "West Bromwich Albion",
-        "score-home": "5",
-        "score-away": "2",
-        "status": "FT",
-        "start-time": ""
+        "team-home": "Brighton & Hove Albion",
+        "team-away": "Manchester United",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "12:30"
     },
     {
-        "team-home": "Leeds United",
-        "team-away": "Fulham",
-        "score-home": "2",
-        "score-away": "1",
-        "status": "HT",
-        "start-time": ""
+        "team-home": "Crystal Palace",
+        "team-away": "Everton",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "15:00"
     },
     {
-        "team-home": "Manchester United",
-        "team-away": "Crystal Palace",
+        "team-home": "West Bromwich Albion",
+        "team-away": "Chelsea",
         "score-home": "0",
         "score-away": "0",
         "status": "",
         "start-time": "17:30"
     },
     {
-        "team-home": "Arsenal",
-        "team-away": "West Ham United",
+        "team-home": "Burnley",
+        "team-away": "Southampton",
         "score-home": "0",
         "score-away": "0",
         "status": "",
         "start-time": "20:00"
+    },
+    {
+        "team-home": "Sheffield United",
+        "team-away": "Leeds United",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "12:00"
+    },
+    {
+        "team-home": "Tottenham Hotspur",
+        "team-away": "Newcastle United",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "14:00"
+    },
+    {
+        "team-home": "Manchester City",
+        "team-away": "Leicester City",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "16:30"
+    },
+    {
+        "team-home": "West Ham United",
+        "team-away": "Wolverhampton Wanderers",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "19:00"
+    },
+    {
+        "team-home": "Fulham",
+        "team-away": "Aston Villa",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "18:00"
+    },
+    {
+        "team-home": "Liverpool",
+        "team-away": "Arsenal",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "20:15"
     }
 ]

@@ -34,17 +34,19 @@ class RunScoreboard(SampleBase):
             matrix = self.matrix
             matrix.Clear()
 
-            with open('/home/pi/rpi-led-scoreboard/config.json') as json_file:
+            valid_matches = False
+
+            with open('/home/pi/rpi-led-scoreboard/config.json') as config_file:
                 try:
-                    config = json.load(json_file)
+                    config = json.load(config_file)
                     if config['state'] == "0":
                         time.sleep(60)
                         continue
                 except ValueError as e:
-                    logging.error(str(e))
-                    break
-
-
+                    logging.error("Ln: 46 " + str(e))
+                    time.sleep(60)
+                    continue
+ 
             with open('/home/pi/rpi-led-scoreboard/matches.json') as json_file:
                 try:
                     data = json.load(json_file)
@@ -52,11 +54,11 @@ class RunScoreboard(SampleBase):
                         time.sleep(60)
                         continue
                 except ValueError as e:
-                    logging.error(str(e))
-                    break
+                    logging.error("Ln: 63 " + str(valid_matches) + " " + str(e))
+                    time.sleep(60)
+                    continue
 
-            
-            if(config["team"] != ALL_TEAMS): # pick out team if specified
+            if(config["team"] != ALL_TEAMS ): # pick out team if specified
                 data = [x for x in data if x["team-home"] == config['team'] or x["team-away"] == config['team']]
 
             if(len(data) == 0): # No matches today
@@ -73,9 +75,9 @@ class RunScoreboard(SampleBase):
                                     image_weather_icon = Image.open(weather_icon)
                                     matrix.SetImage(image_weather_icon.convert('RGB'), 0, 8)
                                 except OSError as e:
-                                    logging.error(str(e))
+                                    logging.error("Ln: 85 " + str(e))
                                 except Exception as e:
-                                    logging.error(str(e))
+                                    logging.error("Ln: 87 " + str(e))
                                 # Temp
                                 fontTemp = graphics.Font()
                                 fontTemp.LoadFont("/home/pi/rpi-led-scoreboard/fonts/5x7.bdf")
@@ -90,7 +92,7 @@ class RunScoreboard(SampleBase):
                                 weather_conditions = weather['weather'][0]['main']
                                 graphics.DrawText(matrix, fontConditions, 0, 10, yellow, weather_conditions)
                     except Exception as e:
-                        logging.error(str(e))
+                        logging.error("Ln: 102 " + str(e))
                     
 
                 # Time
@@ -143,6 +145,14 @@ class RunScoreboard(SampleBase):
                     
                     time.sleep(30)
 
+def json_validator(data):
+    try:
+        json.loads(data.read())
+        return True
+    except ValueError as error:
+        print("invalid json: %s" % error)
+        return False
+
 # Main function
 if __name__ == "__main__":
     logging.basicConfig(format='%(asctime)s  %(name)s  %(levelname)s: %(message)s', 
@@ -159,5 +169,5 @@ if __name__ == "__main__":
         if (not run_scoreboard.process()):
             run_scoreboard.print_help()
     except Exception as e:
-        logging.error(str(e))
+        logging.error("Ln: 180 " + str(e))
     logging.info('Finished')
