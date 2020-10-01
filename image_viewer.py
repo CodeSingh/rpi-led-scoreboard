@@ -13,15 +13,15 @@ from PIL import Image
 import logging
 from logging import handlers
 
+DEFAULT_CLUB_CREST = '/home/pi/rpi-led-scoreboard/img/teams/default.png'  
+WEATHER_JSON = '/home/pi/rpi-led-scoreboard/weather.json' 
+ALL_TEAMS = "all"
+
 class RunScoreboard(SampleBase):
     def __init__(self, *args, **kwargs):
         super(RunScoreboard, self).__init__(*args, **kwargs)
 
     def run(self):
-        DEFAULT_CLUB_CREST = '/home/pi/rpi-led-scoreboard/img/teams/default.png'  
-        WEATHER_JSON = '/home/pi/rpi-led-scoreboard/weather.json' 
-        ALL_TEAMS = "all"
-
         score_team_home = ''
         score_team_away = ''
         image_home = None
@@ -47,6 +47,18 @@ class RunScoreboard(SampleBase):
                     time.sleep(60)
                     continue
  
+            # Single custom match setup
+            if config['state'] == "2":
+                with open('/home/pi/rpi-led-scoreboard/match.json') as json_file_custom_match:
+                    try:
+                        fixture = json.load(json_file_custom_match)
+                    except ValueError as e:
+                        logging.error("Ln: 56 " + str(e))
+                        time.sleep(60)
+                        continue
+                single_match_display(matrix, fixture)
+                continue
+
             with open('/home/pi/rpi-led-scoreboard/matches.json') as json_file:
                 try:
                     data = json.load(json_file)
@@ -54,7 +66,7 @@ class RunScoreboard(SampleBase):
                         time.sleep(60)
                         continue
                 except ValueError as e:
-                    logging.error("Ln: 63 " + str(valid_matches) + " " + str(e))
+                    logging.error("Ln: 68 " + str(valid_matches) + " " + str(e))
                     time.sleep(60)
                     continue
 
@@ -92,7 +104,7 @@ class RunScoreboard(SampleBase):
                                 weather_conditions = weather['weather'][0]['main']
                                 graphics.DrawText(matrix, fontConditions, 0, 10, yellow, weather_conditions)
                     except Exception as e:
-                        logging.error("Ln: 102 " + str(e))
+                        logging.error("Ln: 107 " + str(e))
                     
 
                 # Time
@@ -106,44 +118,7 @@ class RunScoreboard(SampleBase):
 
             else:
                 for fixture in data:
-                    matrix.Clear()
-                    text_team_home = fixture['team-home']
-                    text_team_away = fixture['team-away']
-                    score_team_home = fixture['score-home']
-                    score_team_away = fixture['score-away']
-
-                    file_image_home = '/home/pi/rpi-led-scoreboard/img/teams/' + text_team_home + '.png'
-                    if os.path.isfile(file_image_home):
-                        image_home = Image.open(file_image_home)
-                    else:
-                        image_home = Image.open(DEFAULT_CLUB_CREST)
-
-                    file_image_away = '/home/pi/rpi-led-scoreboard/img/teams/' + text_team_away + '.png'
-                    if os.path.isfile(file_image_away):
-                        image_away = Image.open(file_image_away)
-                    else:
-                        image_away = Image.open(DEFAULT_CLUB_CREST)
-
-                    match_status = fixture['status']
-                    match_start_time = fixture['start-time']                
-                        
-                    matrix.SetImage(image_home.convert('RGB'), -16, 0)
-                    matrix.SetImage(image_away.convert('RGB'), 48, 0)
-
-                    fontScore = graphics.Font()
-                    fontScore.LoadFont("/home/pi/rpi-led-scoreboard/fonts/6x13B.bdf")
-                    yellow = graphics.Color(255, 255, 0)
-                    graphics.DrawText(matrix, fontScore, 17, 10, yellow, "{0} - {1}".format(str(score_team_home), str(score_team_away) ) )
-
-                    green = graphics.Color(0, 255, 0)
-                    fontStatus = graphics.Font()
-                    fontStatus.LoadFont("/home/pi/rpi-led-scoreboard/fonts/6x13B.bdf")
-                    if match_status == "" :
-                        graphics.DrawText(matrix, fontStatus, 17, 22, green, "{0}".format(match_start_time) )
-                    else:
-                        graphics.DrawText(matrix, fontStatus, 26, 22, green, "{0}".format(match_status) )
-                    
-                    time.sleep(30)
+                    single_match_display(matrix, fixture)
 
 def json_validator(data):
     try:
@@ -152,6 +127,45 @@ def json_validator(data):
     except ValueError as error:
         print("invalid json: %s" % error)
         return False
+
+def single_match_display(_matrix, _fixture):
+    _matrix.Clear()
+    text_team_home = _fixture['team-home']
+    text_team_away = _fixture['team-away']
+    score_team_home = _fixture['score-home']
+    score_team_away = _fixture['score-away']
+
+    file_image_home = '/home/pi/rpi-led-scoreboard/img/teams/' + text_team_home + '.png'
+    if os.path.isfile(file_image_home):
+        image_home = Image.open(file_image_home)
+    else:
+        image_home = Image.open(DEFAULT_CLUB_CREST)
+
+    file_image_away = '/home/pi/rpi-led-scoreboard/img/teams/' + text_team_away + '.png'
+    if os.path.isfile(file_image_away):
+        image_away = Image.open(file_image_away)
+    else:
+        image_away = Image.open(DEFAULT_CLUB_CREST)
+
+    match_status = _fixture['status']
+    match_start_time = _fixture['start-time']                
+        
+    _matrix.SetImage(image_home.convert('RGB'), -16, 0)
+    _matrix.SetImage(image_away.convert('RGB'), 48, 0)
+
+    fontScore = graphics.Font()
+    fontScore.LoadFont("/home/pi/rpi-led-scoreboard/fonts/6x13B.bdf")
+    yellow = graphics.Color(255, 255, 0)
+    graphics.DrawText(_matrix, fontScore, 17, 10, yellow, "{0} - {1}".format(str(score_team_home), str(score_team_away) ) )
+
+    green = graphics.Color(0, 255, 0)
+    fontStatus = graphics.Font()
+    fontStatus.LoadFont("/home/pi/rpi-led-scoreboard/fonts/6x13B.bdf")
+    if match_status == "" :
+        graphics.DrawText(_matrix, fontStatus, 17, 22, green, "{0}".format(match_start_time) )
+    else:
+        graphics.DrawText(_matrix, fontStatus, 26, 22, green, "{0}".format(match_status) )
+    time.sleep(30)
 
 # Main function
 if __name__ == "__main__":

@@ -32,7 +32,7 @@ if __name__ == "__main__":
     while True:
         clear_term()
         print("********** Config Updater **********\n")
-        config["state"] = input("Turn ON/OFF [0 = OFF] and [1 = ON]\nCurrent:[" + config["state"] + "]:") or config["state"]
+        config["state"] = input("Turn ON/OFF [0 = OFF] [1 = ON] [2 = Custom Match]\nCurrent:[" + config["state"] + "]:") or config["state"]
 
         current_team_no = 0
         for key, value in c.DICT_TEAMS.items():
