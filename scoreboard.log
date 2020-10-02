@@ -14,3 +14,10 @@
 2020-10-02 22:11:35,220  root  INFO: Started
 2020-10-02 22:23:41,877  root  INFO: Started
 2020-10-02 22:34:33,685  root  INFO: Started
+2020-10-02 22:41:43,619  root  INFO: Started
+2020-10-02 22:46:26,907  root  ERROR: Ln: 180 list indices must be integers or slices, not str
+2020-10-02 22:46:26,924  root  INFO: Finished
+2020-10-02 22:47:32,109  root  INFO: Started
+2020-10-02 22:47:32,584  root  ERROR: Ln: 180 list indices must be integers or slices, not str
+2020-10-02 22:47:32,648  root  INFO: Finished
+2020-10-02 22:52:08,538  root  INFO: Started

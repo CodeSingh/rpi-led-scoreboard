@@ -13,7 +13,7 @@ sudo make install-python PYTHON=$(which python3)
 
 cd /home/pi/rpi-led-scoreboard/
 cp config.json.example config.json
-sudo chmod 777 config.json
+sudo chmod 666 config.json
 sudo crontab cronjobs.txt
 
 cd /etc/modprobe.d/

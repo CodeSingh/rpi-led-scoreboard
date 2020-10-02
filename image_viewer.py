@@ -51,12 +51,13 @@ class RunScoreboard(SampleBase):
             if config['state'] == "2":
                 with open('/home/pi/rpi-led-scoreboard/match.json') as json_file_custom_match:
                     try:
-                        fixture = json.load(json_file_custom_match)
+                        data = json.load(json_file_custom_match)
                     except ValueError as e:
                         logging.error("Ln: 56 " + str(e))
                         time.sleep(60)
                         continue
-                single_match_display(matrix, fixture)
+                for fixture in data:
+                    single_match_display(matrix, fixture)
                 continue
 
             with open('/home/pi/rpi-led-scoreboard/matches.json') as json_file:
