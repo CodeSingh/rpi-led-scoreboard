@@ -1,9 +1,9 @@
 [{
     "team-away": "Liverpool",
     "team-home": "AC Milan",
-    "status": "",
-    "start-time": " AET ",
-    "start-date": "23/5/05",
+    "status": "AET",
+    "start-time": "",
+    "start-date": "",
     "score-away": "3",
     "state": "0",
     "score-home": "3"

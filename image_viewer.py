@@ -49,9 +49,9 @@ class RunScoreboard(SampleBase):
  
             # Single custom match setup
             if config['state'] == "2":
-                with open('/home/pi/rpi-led-scoreboard/match.json') as json_file_custom_match:
+                with open('/home/pi/rpi-led-scoreboard/custom_matches.json') as json_file_custom_matches:
                     try:
-                        data = json.load(json_file_custom_match)
+                        data = json.load(json_file_custom_matches)
                     except ValueError as e:
                         logging.error("Ln: 56 " + str(e))
                         time.sleep(60)
@@ -163,9 +163,11 @@ def single_match_display(_matrix, _fixture):
     fontStatus = graphics.Font()
     fontStatus.LoadFont("/home/pi/rpi-led-scoreboard/fonts/6x13B.bdf")
     if match_status == "" :
-        graphics.DrawText(_matrix, fontStatus, 17, 22, green, "{0}".format(match_start_time) )
+        text_len = len(match_start_time)
+        graphics.DrawText(_matrix, fontStatus, 32-(6* (text_len / 2)), 20, green, "{0}".format(match_start_time) )
     else:
-        graphics.DrawText(_matrix, fontStatus, 26, 22, green, "{0}".format(match_status) )
+        text_len = len(match_status)
+        graphics.DrawText(_matrix, fontStatus, 32-(6* (text_len / 2)), 20, green, "{0}".format(match_status) )
     time.sleep(30)
 
 # Main function

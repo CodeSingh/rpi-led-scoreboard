@@ -21,3 +21,11 @@
 2020-10-02 22:47:32,584  root  ERROR: Ln: 180 list indices must be integers or slices, not str
 2020-10-02 22:47:32,648  root  INFO: Finished
 2020-10-02 22:52:08,538  root  INFO: Started
+2020-10-02 23:00:07,781  root  INFO: Started
+2020-10-02 23:04:22,881  root  INFO: Started
+2020-10-02 23:13:49,179  root  ERROR: Ln: 180 [Errno 2] No such file or directory: '/home/pi/rpi-led-scoreboard/match.json'
+2020-10-02 23:13:49,207  root  INFO: Finished
+2020-10-02 23:22:20,116  root  INFO: Started
+2020-10-02 23:28:21,056  root  INFO: Started
+2020-10-02 23:35:12,127  root  INFO: Started
+2020-10-02 23:38:42,269  root  INFO: Started
