@@ -6,3 +6,4 @@ DICT_TEAMS = {1: 'Arsenal', 2: 'Aston Villa', 3: 'Fulham',
 16: 'Southampton', 17: 'Tottenham Hotspur', 18: 'West Bromwich Albion', 
 19: 'West Ham United', 20: 'Wolverhampton Wanderers'}
 DICT_TEMP_TYPES = {"metric": "'C", "imperial": "'F" }
+BASE_PATH_SCOREBOARD = '/home/pi/rpi-led-scoreboard/'

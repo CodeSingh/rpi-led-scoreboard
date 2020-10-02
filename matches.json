@@ -80,6 +80,14 @@
         "start-time": "19:15"
     },
     {
+        "team-home": "Everton",
+        "team-away": "Liverpool",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "12:30"
+    },
+    {
         "team-home": "Chelsea",
         "team-away": "Southampton",
         "score-home": "0",
@@ -88,40 +96,8 @@
         "start-time": "15:00"
     },
     {
-        "team-home": "Crystal Palace",
-        "team-away": "Brighton & Hove Albion",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "15:00"
-    },
-    {
-        "team-home": "Everton",
-        "team-away": "Liverpool",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "15:00"
-    },
-    {
-        "team-home": "Leeds United",
-        "team-away": "Wolverhampton Wanderers",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "15:00"
-    },
-    {
         "team-home": "Leicester City",
         "team-away": "Aston Villa",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "15:00"
-    },
-    {
-        "team-home": "Manchester City",
-        "team-away": "Arsenal",
         "score-home": "0",
         "score-away": "0",
         "status": "",
@@ -144,20 +120,52 @@
         "start-time": "15:00"
     },
     {
-        "team-home": "Tottenham Hotspur",
-        "team-away": "West Ham United",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "15:00"
-    },
-    {
         "team-home": "West Bromwich Albion",
         "team-away": "Burnley",
         "score-home": "0",
         "score-away": "0",
         "status": "",
         "start-time": "15:00"
+    },
+    {
+        "team-home": "Manchester City",
+        "team-away": "Arsenal",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "17:30"
+    },
+    {
+        "team-home": "Crystal Palace",
+        "team-away": "Brighton & Hove Albion",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "14:00"
+    },
+    {
+        "team-home": "Tottenham Hotspur",
+        "team-away": "West Ham United",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "16:30"
+    },
+    {
+        "team-home": "Leeds United",
+        "team-away": "Wolverhampton Wanderers",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "20:00"
+    },
+    {
+        "team-home": "West Ham United",
+        "team-away": "Manchester City",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "12:30"
     },
     {
         "team-home": "Arsenal",
@@ -178,14 +186,6 @@
     {
         "team-home": "Brighton & Hove Albion",
         "team-away": "West Bromwich Albion",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "15:00"
-    },
-    {
-        "team-home": "Burnley",
-        "team-away": "Tottenham Hotspur",
         "score-home": "0",
         "score-away": "0",
         "status": "",
@@ -213,7 +213,7 @@
         "score-home": "0",
         "score-away": "0",
         "status": "",
-        "start-time": "15:00"
+        "start-time": "17:30"
     },
     {
         "team-home": "Southampton",
@@ -221,15 +221,7 @@
         "score-home": "0",
         "score-away": "0",
         "status": "",
-        "start-time": "15:00"
-    },
-    {
-        "team-home": "West Ham United",
-        "team-away": "Manchester City",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "15:00"
+        "start-time": "14:00"
     },
     {
         "team-home": "Wolverhampton Wanderers",
@@ -237,7 +229,23 @@
         "score-home": "0",
         "score-away": "0",
         "status": "",
-        "start-time": "15:00"
+        "start-time": "16:30"
+    },
+    {
+        "team-home": "Burnley",
+        "team-away": "Tottenham Hotspur",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "20:00"
+    },
+    {
+        "team-home": "Sheffield United",
+        "team-away": "Manchester City",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "12:30"
     },
     {
         "team-home": "Aston Villa",
@@ -264,46 +272,6 @@
         "start-time": "15:00"
     },
     {
-        "team-home": "Leeds United",
-        "team-away": "Leicester City",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "15:00"
-    },
-    {
-        "team-home": "Liverpool",
-        "team-away": "West Ham United",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "15:00"
-    },
-    {
-        "team-home": "Manchester United",
-        "team-away": "Arsenal",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "15:00"
-    },
-    {
-        "team-home": "Newcastle United",
-        "team-away": "Everton",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "15:00"
-    },
-    {
-        "team-home": "Sheffield United",
-        "team-away": "Manchester City",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "",
-        "start-time": "15:00"
-    },
-    {
         "team-home": "Tottenham Hotspur",
         "team-away": "Brighton & Hove Albion",
         "score-home": "0",
@@ -318,5 +286,13 @@
         "score-away": "0",
         "status": "",
         "start-time": "15:00"
+    },
+    {
+        "team-home": "Liverpool",
+        "team-away": "West Ham United",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "17:30"
     }
 ]

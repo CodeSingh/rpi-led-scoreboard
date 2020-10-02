@@ -4,12 +4,13 @@
    </head>
    <body>
       <h1>Scoreboard Configurator</h1>
-      <form action = "/reboot" method = "post"><input type = "submit" value = "Reboot" /></form>
+      <form action = "/reboot" method = "post"><input type = "submit" value = "Reboot" /></form><br />
+      <form action = "/update" method = "post"><input type = "submit" value = "Update Scoreboard Software" /></form>
       <form action = "/save" method = "post">
          <p><label for="state">Status:</label>
             <input type="radio" id="on" name="state" value="1" {{'checked' if data.state == '1' else ''}} />ON
             <input type="radio" id="off" name="state" value="0" {{'checked' if data.state == '0' else ''}} />OFF
-            <input type="radio" id="custom" name="state" value="2" {{'checked' if data.state == '2' else ''}} />Custom Match
+            <input type="radio" id="custom" name="state" value="2" {{'checked' if data.state == '2' else ''}} />Custom Game(s)
          </p>
          <p><label for="team">Team:</label>
             <select name = "team">

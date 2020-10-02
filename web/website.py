@@ -28,11 +28,17 @@ def index():
 def reboot():
    if request.method == 'POST':
       os.system('sudo reboot')
-      time.sleep(5)
+      time.sleep(120)
       return redirect(url_for('index'))
-   #else:
-   #   user = request.args.get('nm')
-   #   return redirect(url_for('success',name = user))
+
+@app.route('/update',methods = ['POST'])
+def update():
+   if request.method == 'POST':
+      os.chdir(c.BASE_PATH_SCOREBOARD)
+      os.system('sudo -u pi git pull origin master')
+      os.system('sudo reboot')
+      time.sleep(120)
+      return redirect(url_for('index'))
 
 @app.route('/save',methods = ['POST'])
 def save():
