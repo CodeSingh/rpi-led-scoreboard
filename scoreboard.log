@@ -110,3 +110,4 @@
 2020-10-04 16:31:10,771  root  ERROR: Ln: 216 [Errno 2] No such file or directory: '/home/pi/rpi-led-scoreboard/custom_matches.json'
 2020-10-04 16:31:10,802  root  INFO: Finished
 2020-10-04 16:36:34,800  root  INFO: Started
+2020-10-04 19:18:43,014  root  INFO: Started

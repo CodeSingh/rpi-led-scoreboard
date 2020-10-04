@@ -13,7 +13,6 @@ from config_update import get_config, set_config
 import constants as c
 from livescore_manager import LivescoreManager
 
-
 app = Flask(__name__)
 @app.route("/")
 def index():
@@ -28,6 +27,13 @@ def index():
 def reboot():
    if request.method == 'POST':
       os.system('sudo reboot')
+
+      return redirect(url_for('index'))
+
+@app.route('/shutdown',methods = ['POST'])
+def shutdown():
+   if request.method == 'POST':
+      os.system('sudo shutdown -h now')
 
       return redirect(url_for('index'))
 
@@ -67,4 +73,4 @@ def create_config_files(state):
 
 
 if __name__ == "__main__":
-   app.run(host='0.0.0.0', port=80, debug=True)
+   app.run(host='0.0.0.0', port=80, debug=False)
