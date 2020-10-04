@@ -1,6 +1,6 @@
 '''
-Code created by Matt Richardson 
-for details, visit:  http://mattrichardson.com/Raspberry-Pi-Flask/inde...
+Code based on work by Matt Richardson 
+for details, visit:  http://mattrichardson.com/Raspberry-Pi-Flask/
 '''
 from flask import Flask, render_template, request, redirect, url_for
 import datetime
@@ -51,13 +51,20 @@ def save():
       config['weather_api_key'] = request.form['weather_api_key']
       config['weather_api_units'] = request.form['weather_api_units']
 
-      
+      create_config_files(config['state'])
+
       set_config(config)
 
    return redirect(url_for('index'))
    #else:
    #   user = request.args.get('nm')
    #   return redirect(url_for('success',name = user))
+
+def create_config_files(state):
+   if state == c.STATE_CUSTOM_MATCHES:
+      if not os.path.isfile('/home/pi/rpi-led-scoreboard/custom_matches.json'):
+         os.system('cp -a /home/pi/rpi-led-scoreboard/custom_matches.json.example /home/pi/rpi-led-scoreboard/custom_matches.json')
+
 
 if __name__ == "__main__":
    app.run(host='0.0.0.0', port=80, debug=True)

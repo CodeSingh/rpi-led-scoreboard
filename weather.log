@@ -1,24 +1,184 @@
-2020-10-02 21:37:41,738  root  INFO: Started
-2020-10-02 21:37:45,662  root  INFO: Finished
-2020-10-02 21:46:25,560  root  INFO: Started
-2020-10-02 21:46:28,982  root  INFO: Finished
-2020-10-02 22:21:51,237  root  INFO: Started
-2020-10-02 22:21:55,079  root  INFO: Finished
-2020-10-02 22:32:25,510  root  INFO: Started
-2020-10-02 22:32:27,772  root  INFO: Finished
-2020-10-02 22:49:44,707  root  INFO: Started
-2020-10-02 22:49:45,621  root  INFO: Finished
-2020-10-02 22:51:38,649  root  INFO: Started
-2020-10-02 22:51:39,594  root  INFO: Finished
-2020-10-02 23:13:52,190  root  INFO: Started
-2020-10-02 23:13:53,073  root  INFO: Finished
-2020-10-02 23:15:31,044  root  INFO: Started
-2020-10-02 23:15:31,888  root  INFO: Finished
-2020-10-02 23:17:28,596  root  INFO: Started
-2020-10-02 23:17:29,451  root  INFO: Finished
-2020-10-02 23:19:27,870  root  INFO: Started
-2020-10-02 23:19:28,681  root  INFO: Finished
-2020-10-02 23:21:33,295  root  INFO: Started
-2020-10-02 23:21:34,147  root  INFO: Finished
-2020-10-02 23:48:49,368  root  INFO: Started
-2020-10-02 23:48:52,302  root  INFO: Finished
+2020-10-04 15:32:53,620  root  INFO: Finished
+2020-10-04 15:33:50,915  root  INFO: Started
+2020-10-04 15:33:53,046  root  INFO: Got weather
+2020-10-04 15:33:53,073  root  INFO: Finished
+2020-10-04 15:34:49,164  root  INFO: Started
+2020-10-04 15:34:51,849  root  INFO: Got weather
+2020-10-04 15:34:51,907  root  INFO: Finished
+2020-10-04 15:35:50,081  root  INFO: Started
+2020-10-04 15:35:52,292  root  INFO: Got weather
+2020-10-04 15:35:52,319  root  INFO: Finished
+2020-10-04 15:36:49,293  root  INFO: Started
+2020-10-04 15:36:51,436  root  INFO: Got weather
+2020-10-04 15:36:51,462  root  INFO: Finished
+2020-10-04 15:37:50,879  root  INFO: Started
+2020-10-04 15:37:53,048  root  INFO: Got weather
+2020-10-04 15:37:53,074  root  INFO: Finished
+2020-10-04 15:38:51,063  root  INFO: Started
+2020-10-04 15:38:53,253  root  INFO: Got weather
+2020-10-04 15:38:53,280  root  INFO: Finished
+2020-10-04 15:41:25,983  root  INFO: Started
+2020-10-04 15:41:26,802  root  INFO: Got weather
+2020-10-04 15:41:26,809  root  INFO: Finished
+2020-10-04 15:43:24,872  root  INFO: Started
+2020-10-04 15:43:25,666  root  INFO: Got weather
+2020-10-04 15:43:25,673  root  INFO: Finished
+2020-10-04 15:44:13,192  root  INFO: Started
+2020-10-04 15:44:13,959  root  INFO: Got weather
+2020-10-04 15:44:13,966  root  INFO: Finished
+2020-10-04 15:45:13,595  root  INFO: Started
+2020-10-04 15:45:14,350  root  INFO: Got weather
+2020-10-04 15:45:14,357  root  INFO: Finished
+2020-10-04 15:46:13,997  root  INFO: Started
+2020-10-04 15:46:14,746  root  INFO: Got weather
+2020-10-04 15:46:14,753  root  INFO: Finished
+2020-10-04 15:47:13,392  root  INFO: Started
+2020-10-04 15:47:14,157  root  INFO: Got weather
+2020-10-04 15:47:14,165  root  INFO: Finished
+2020-10-04 15:48:13,793  root  INFO: Started
+2020-10-04 15:48:14,574  root  INFO: Got weather
+2020-10-04 15:48:14,581  root  INFO: Finished
+2020-10-04 15:49:13,155  root  INFO: Started
+2020-10-04 15:49:13,939  root  INFO: Got weather
+2020-10-04 15:49:13,946  root  INFO: Finished
+2020-10-04 15:50:13,513  root  INFO: Started
+2020-10-04 15:50:14,433  root  INFO: Got weather
+2020-10-04 15:50:14,440  root  INFO: Finished
+2020-10-04 15:51:14,006  root  INFO: Started
+2020-10-04 15:51:14,778  root  INFO: Got weather
+2020-10-04 15:51:14,786  root  INFO: Finished
+2020-10-04 15:52:13,512  root  INFO: Started
+2020-10-04 15:52:14,266  root  INFO: Got weather
+2020-10-04 15:52:14,273  root  INFO: Finished
+2020-10-04 15:53:14,062  root  INFO: Started
+2020-10-04 15:53:14,941  root  INFO: Got weather
+2020-10-04 15:53:14,948  root  INFO: Finished
+2020-10-04 15:54:13,590  root  INFO: Started
+2020-10-04 15:54:14,325  root  INFO: Got weather
+2020-10-04 15:54:14,333  root  INFO: Finished
+2020-10-04 15:55:13,818  root  INFO: Started
+2020-10-04 15:55:14,552  root  INFO: Got weather
+2020-10-04 15:55:14,560  root  INFO: Finished
+2020-10-04 15:56:14,035  root  INFO: Started
+2020-10-04 15:56:14,927  root  INFO: Got weather
+2020-10-04 15:56:14,935  root  INFO: Finished
+2020-10-04 15:57:13,805  root  INFO: Started
+2020-10-04 15:57:14,563  root  INFO: Got weather
+2020-10-04 15:57:14,571  root  INFO: Finished
+2020-10-04 15:58:14,211  root  INFO: Started
+2020-10-04 15:58:14,946  root  INFO: Got weather
+2020-10-04 15:58:14,953  root  INFO: Finished
+2020-10-04 15:59:13,819  root  INFO: Started
+2020-10-04 15:59:14,667  root  INFO: Got weather
+2020-10-04 15:59:14,674  root  INFO: Finished
+2020-10-04 16:00:13,375  root  INFO: Started
+2020-10-04 16:00:23,872  root  INFO: Got weather
+2020-10-04 16:00:23,879  root  INFO: Finished
+2020-10-04 16:01:13,510  root  INFO: Started
+2020-10-04 16:01:14,254  root  INFO: Got weather
+2020-10-04 16:01:14,261  root  INFO: Finished
+2020-10-04 16:02:13,839  root  INFO: Started
+2020-10-04 16:02:14,674  root  INFO: Got weather
+2020-10-04 16:02:14,681  root  INFO: Finished
+2020-10-04 16:03:13,358  root  INFO: Started
+2020-10-04 16:03:14,107  root  INFO: Got weather
+2020-10-04 16:03:14,115  root  INFO: Finished
+2020-10-04 16:05:13,980  root  INFO: Started
+2020-10-04 16:05:14,826  root  INFO: Got weather
+2020-10-04 16:05:14,833  root  INFO: Finished
+2020-10-04 16:06:25,063  root  INFO: Started
+2020-10-04 16:06:25,808  root  INFO: Got weather
+2020-10-04 16:06:25,816  root  INFO: Finished
+2020-10-04 16:07:13,728  root  INFO: Started
+2020-10-04 16:07:14,486  root  INFO: Got weather
+2020-10-04 16:07:14,493  root  INFO: Finished
+2020-10-04 16:08:14,224  root  INFO: Started
+2020-10-04 16:08:15,017  root  INFO: Got weather
+2020-10-04 16:08:15,025  root  INFO: Finished
+2020-10-04 16:09:21,006  root  INFO: Started
+2020-10-04 16:09:21,792  root  INFO: Got weather
+2020-10-04 16:09:21,799  root  INFO: Finished
+2020-10-04 16:10:25,002  root  INFO: Started
+2020-10-04 16:10:25,782  root  INFO: Got weather
+2020-10-04 16:10:25,789  root  INFO: Finished
+2020-10-04 16:12:26,039  root  INFO: Started
+2020-10-04 16:12:27,031  root  INFO: Got weather
+2020-10-04 16:12:27,038  root  INFO: Finished
+2020-10-04 16:13:15,204  root  INFO: Started
+2020-10-04 16:13:15,949  root  INFO: Got weather
+2020-10-04 16:13:15,956  root  INFO: Finished
+2020-10-04 16:14:15,094  root  INFO: Started
+2020-10-04 16:14:15,965  root  INFO: Got weather
+2020-10-04 16:14:15,973  root  INFO: Finished
+2020-10-04 16:15:15,367  root  INFO: Started
+2020-10-04 16:15:16,245  root  INFO: Got weather
+2020-10-04 16:15:16,252  root  INFO: Finished
+2020-10-04 16:16:15,580  root  INFO: Started
+2020-10-04 16:16:16,488  root  INFO: Got weather
+2020-10-04 16:16:16,495  root  INFO: Finished
+2020-10-04 16:17:15,908  root  INFO: Started
+2020-10-04 16:17:16,776  root  INFO: Got weather
+2020-10-04 16:17:16,784  root  INFO: Finished
+2020-10-04 16:18:15,304  root  INFO: Started
+2020-10-04 16:18:16,119  root  INFO: Got weather
+2020-10-04 16:18:16,126  root  INFO: Finished
+2020-10-04 16:19:15,398  root  INFO: Started
+2020-10-04 16:19:16,260  root  INFO: Got weather
+2020-10-04 16:19:16,267  root  INFO: Finished
+2020-10-04 16:20:15,547  root  INFO: Started
+2020-10-04 16:20:16,470  root  INFO: Got weather
+2020-10-04 16:20:16,478  root  INFO: Finished
+2020-10-04 16:21:15,962  root  INFO: Started
+2020-10-04 16:21:16,851  root  INFO: Got weather
+2020-10-04 16:21:16,858  root  INFO: Finished
+2020-10-04 16:22:15,168  root  INFO: Started
+2020-10-04 16:22:16,029  root  INFO: Got weather
+2020-10-04 16:22:16,036  root  INFO: Finished
+2020-10-04 16:23:15,187  root  INFO: Started
+2020-10-04 16:23:16,116  root  INFO: Got weather
+2020-10-04 16:23:16,123  root  INFO: Finished
+2020-10-04 16:24:15,359  root  INFO: Started
+2020-10-04 16:24:16,305  root  INFO: Got weather
+2020-10-04 16:24:16,312  root  INFO: Finished
+2020-10-04 16:26:27,143  root  INFO: Started
+2020-10-04 16:26:28,073  root  INFO: Got weather
+2020-10-04 16:26:28,081  root  INFO: Finished
+2020-10-04 16:27:15,134  root  INFO: Started
+2020-10-04 16:27:15,980  root  INFO: Got weather
+2020-10-04 16:27:15,987  root  INFO: Finished
+2020-10-04 16:28:15,286  root  INFO: Started
+2020-10-04 16:28:16,155  root  INFO: Got weather
+2020-10-04 16:28:16,162  root  INFO: Finished
+2020-10-04 16:29:16,075  root  INFO: Started
+2020-10-04 16:29:16,926  root  INFO: Got weather
+2020-10-04 16:29:16,933  root  INFO: Finished
+2020-10-04 16:30:14,895  root  INFO: Started
+2020-10-04 16:30:15,699  root  INFO: Got weather
+2020-10-04 16:30:15,706  root  INFO: Finished
+2020-10-04 16:32:28,389  root  INFO: Started
+2020-10-04 16:32:29,209  root  INFO: Got weather
+2020-10-04 16:32:29,217  root  INFO: Finished
+2020-10-04 16:33:15,331  root  INFO: Started
+2020-10-04 16:33:16,187  root  INFO: Got weather
+2020-10-04 16:33:16,194  root  INFO: Finished
+2020-10-04 16:34:15,776  root  INFO: Started
+2020-10-04 16:34:16,644  root  INFO: Got weather
+2020-10-04 16:34:16,651  root  INFO: Finished
+2020-10-04 16:35:14,781  root  INFO: Started
+2020-10-04 16:35:15,588  root  INFO: Got weather
+2020-10-04 16:35:15,595  root  INFO: Finished
+2020-10-04 16:38:49,618  root  INFO: Started
+2020-10-04 16:38:56,493  root  INFO: Got weather
+2020-10-04 16:38:56,594  root  INFO: Finished
+2020-10-04 16:40:30,110  root  INFO: Started
+2020-10-04 16:40:33,722  root  INFO: Got weather
+2020-10-04 16:40:33,749  root  INFO: Finished
+2020-10-04 16:42:23,494  root  INFO: Started
+2020-10-04 16:42:28,932  root  INFO: Got weather
+2020-10-04 16:42:28,990  root  INFO: Finished
+2020-10-04 16:44:20,702  root  INFO: Started
+2020-10-04 16:44:23,944  root  INFO: Got weather
+2020-10-04 16:44:23,970  root  INFO: Finished
+2020-10-04 16:46:26,504  root  INFO: Started
+2020-10-04 16:46:29,816  root  INFO: Got weather
+2020-10-04 16:46:29,844  root  INFO: Finished

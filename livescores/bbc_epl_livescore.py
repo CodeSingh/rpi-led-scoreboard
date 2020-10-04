@@ -20,7 +20,7 @@ class BBC_EPL_Livescore(Livescore):
         self.now = datetime.now() # current date and time
         self.url = self.LIVESCORE_URL + '?' + self.now.strftime("%Y%m%d%h%M%s")
         self.page = requests.get(self.url)
-        self.soup = BeautifulSoup(self.page.read(), "lxml")
+        self.soup = BeautifulSoup(self.page.text, "lxml")
 
         self.my_fixture = {}
         self.my_fixture["team-home"] = 'default'
@@ -83,9 +83,9 @@ class BBC_EPL_Livescore(Livescore):
         
         self.now = datetime.now() # current date and time
         self.url = self.LIVESCORE_URL + '?' + self.now.strftime("%Y-%m-%d")
-        self.page = urlopen(self.url)
+        self.page = requests.get(self.url)
         print(self.url)
-        self.soup = BeautifulSoup(self.page.read(), "lxml")
+        self.soup = BeautifulSoup(self.page.text, "lxml")
 
         self.all_my_fixtures = []
 

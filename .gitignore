@@ -1,7 +1,11 @@
 config.json
+custom_matches.json
 runlock.lck
 rpi-rgb-led-matrix-master/
 wifi/
 *.log
+*.log.1
+*.log.2
+*.log.3
 __pycache__/
 *.py[cod]

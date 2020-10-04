@@ -29,3 +29,84 @@
 2020-10-02 23:28:21,056  root  INFO: Started
 2020-10-02 23:35:12,127  root  INFO: Started
 2020-10-02 23:38:42,269  root  INFO: Started
+2020-10-03 00:10:29,559  root  INFO: Started
+2020-10-03 00:15:10,428  root  INFO: Started
+2020-10-03 00:21:32,294  root  INFO: Started
+2020-10-03 00:25:14,030  root  INFO: Started
+2020-10-03 00:28:55,203  root  INFO: Started
+2020-10-03 00:34:00,536  root  INFO: Started
+2020-10-03 00:38:40,702  root  INFO: Started
+2020-10-03 00:41:14,369  root  INFO: Started
+2020-10-03 00:45:42,304  root  INFO: Started
+2020-10-03 00:49:38,318  root  INFO: Started
+2020-10-03 09:18:35,144  root  INFO: Started
+2020-10-03 09:36:07,780  root  INFO: Started
+2020-10-03 09:36:23,967  root  ERROR: Ln: 199 name 'ImageDraw' is not defined
+2020-10-03 09:36:24,045  root  INFO: Finished
+2020-10-03 09:38:15,191  root  INFO: Started
+2020-10-03 09:38:23,580  root  ERROR: Ln: 199 name 'ImageDraw' is not defined
+2020-10-03 09:38:23,647  root  INFO: Finished
+2020-10-03 09:39:50,858  root  INFO: Started
+2020-10-03 09:40:02,121  root  ERROR: Ln: 199 name 'ImageDraw' is not defined
+2020-10-03 09:40:02,258  root  INFO: Finished
+2020-10-03 09:42:33,364  root  INFO: Started
+2020-10-03 09:42:45,894  root  ERROR: Ln: 205 name 'matrix' is not defined
+2020-10-03 09:42:45,986  root  INFO: Finished
+2020-10-03 09:44:07,167  root  INFO: Started
+2020-10-03 09:48:36,605  root  INFO: Started
+2020-10-03 09:52:31,271  root  INFO: Started
+2020-10-03 11:07:12,118  root  INFO: Started
+2020-10-03 11:52:34,189  root  INFO: Started
+2020-10-03 12:03:06,105  root  INFO: Started
+2020-10-03 12:07:28,354  root  INFO: Started
+2020-10-03 12:11:08,126  root  INFO: Started
+2020-10-03 12:29:09,221  root  INFO: Started
+2020-10-03 12:32:37,930  root  INFO: Started
+2020-10-03 12:37:06,458  root  INFO: Started
+2020-10-03 13:00:18,898  root  INFO: Started
+2020-10-03 13:00:34,795  root  ERROR: Ln: 205 unsupported operand type(s) for +: 'int' and 'tuple'
+2020-10-03 13:00:34,861  root  INFO: Finished
+2020-10-03 13:04:17,885  root  INFO: Started
+2020-10-03 13:44:41,942  root  INFO: Started
+2020-10-03 13:48:53,844  root  INFO: Started
+2020-10-03 13:57:44,005  root  INFO: Started
+2020-10-03 14:08:25,455  root  INFO: Started
+2020-10-03 15:24:30,196  root  INFO: Started
+2020-10-03 15:32:30,759  root  INFO: Started
+2020-10-03 15:56:36,471  root  INFO: Started
+2020-10-03 18:15:24,605  root  INFO: Started
+2020-10-03 18:53:33,541  root  INFO: Started
+2020-10-03 19:05:54,088  root  INFO: Started
+2020-10-03 23:22:24,616  root  INFO: Started
+2020-10-03 23:53:48,821  root  INFO: Started
+2020-10-04 00:04:11,994  root  ERROR: Ln: 216 [Errno 2] No such file or directory: '/home/pi/rpi-led-scoreboard/custom_matches.json'
+2020-10-04 00:04:12,012  root  INFO: Finished
+2020-10-04 00:28:00,639  root  INFO: Started
+2020-10-04 00:28:01,050  root  ERROR: Ln: 216 [Errno 13] Permission denied: '/home/pi/rpi-led-scoreboard/custom_matches.json'
+2020-10-04 00:28:01,109  root  INFO: Finished
+2020-10-04 00:32:36,252  root  INFO: Started
+2020-10-04 00:32:36,491  root  ERROR: Ln: 216 [Errno 13] Permission denied: '/home/pi/rpi-led-scoreboard/custom_matches.json'
+2020-10-04 00:32:36,531  root  INFO: Finished
+2020-10-04 09:11:12,866  root  INFO: Started
+2020-10-04 15:40:10,056  root  INFO: Started
+2020-10-04 15:40:10,311  root  ERROR: Ln: 216 [Errno 13] Permission denied: '/home/pi/rpi-led-scoreboard/custom_matches.json'
+2020-10-04 15:40:10,345  root  INFO: Finished
+2020-10-04 15:42:17,403  root  INFO: Started
+2020-10-04 15:42:17,604  root  ERROR: Ln: 216 [Errno 13] Permission denied: '/home/pi/rpi-led-scoreboard/custom_matches.json'
+2020-10-04 15:42:17,633  root  INFO: Finished
+2020-10-04 16:04:11,204  root  INFO: Started
+2020-10-04 16:04:11,514  root  ERROR: Ln: 216 [Errno 2] No such file or directory: '/home/pi/rpi-led-scoreboard/custom_matches.json'
+2020-10-04 16:04:11,553  root  INFO: Finished
+2020-10-04 16:08:56,669  root  INFO: Started
+2020-10-04 16:08:56,883  root  ERROR: Ln: 216 [Errno 2] No such file or directory: '/home/pi/rpi-led-scoreboard/custom_matches.json'
+2020-10-04 16:08:56,954  root  INFO: Finished
+2020-10-04 16:11:22,337  root  INFO: Started
+2020-10-04 16:11:22,523  root  ERROR: Ln: 216 [Errno 2] No such file or directory: '/home/pi/rpi-led-scoreboard/custom_matches.json'
+2020-10-04 16:11:22,551  root  INFO: Finished
+2020-10-04 16:25:17,990  root  INFO: Started
+2020-10-04 16:25:18,248  root  ERROR: Ln: 216 [Errno 2] No such file or directory: '/home/pi/rpi-led-scoreboard/custom_matches.json'
+2020-10-04 16:25:18,290  root  INFO: Finished
+2020-10-04 16:31:10,650  root  INFO: Started
+2020-10-04 16:31:10,771  root  ERROR: Ln: 216 [Errno 2] No such file or directory: '/home/pi/rpi-led-scoreboard/custom_matches.json'
+2020-10-04 16:31:10,802  root  INFO: Finished
+2020-10-04 16:36:34,800  root  INFO: Started

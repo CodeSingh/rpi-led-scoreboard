@@ -40,22 +40,25 @@ def main():
     PATH_TO_WEATHER_JSON = '/home/pi/rpi-led-scoreboard/weather.json'
     URL_ICON = "http://openweathermap.org/img/w/{0}.png"
     PATH_ICON = "/home/pi/rpi-led-scoreboard/img/weather/icons/{0}.png"
+    INCORRECT_API_KEYS = ['', 'XXX']
 
     config = get_config()
     location = config['weather_location']
     units = config['weather_api_units']
     api_key = config['weather_api_key']
     url = config['weather_api_url']
-    weather = get_weather(url, api_key, location, units)
-    
-    if 'weather' in weather:
-        icon_url = URL_ICON.format(weather['weather'][0]['icon'])
-        icon_path = PATH_ICON.format(weather['weather'][0]['icon'])
-        get_icon(icon_url, icon_path)
 
+    if api_key not in INCORRECT_API_KEYS:
+        weather = get_weather(url, api_key, location, units)
+        
+        if 'weather' in weather:
+            icon_url = URL_ICON.format(weather['weather'][0]['icon'])
+            icon_path = PATH_ICON.format(weather['weather'][0]['icon'])
+            get_icon(icon_url, icon_path)
+            logging.info('Got weather')
 
-    with open(PATH_TO_WEATHER_JSON,'w') as jsonfile:
-        json.dump(weather , jsonfile, indent=4) # you decide the indentation level     
+        with open(PATH_TO_WEATHER_JSON,'w') as jsonfile:
+            json.dump(weather , jsonfile, indent=4)
  
 if __name__ == '__main__':
     logging.basicConfig(format='%(asctime)s  %(name)s  %(levelname)s: %(message)s', level=logging.INFO,

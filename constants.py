@@ -7,3 +7,4 @@ DICT_TEAMS = {1: 'Arsenal', 2: 'Aston Villa', 3: 'Fulham',
 19: 'West Ham United', 20: 'Wolverhampton Wanderers'}
 DICT_TEMP_TYPES = {"metric": "'C", "imperial": "'F" }
 BASE_PATH_SCOREBOARD = '/home/pi/rpi-led-scoreboard/'
+STATE_CUSTOM_MATCHES = '2'

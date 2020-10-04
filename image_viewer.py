@@ -10,6 +10,7 @@ from datetime import datetime
 from samplebase import SampleBase
 from rgbmatrix import RGBMatrix, RGBMatrixOptions, graphics
 from PIL import Image
+from PIL import ImageDraw
 import logging
 from logging import handlers
 
@@ -43,17 +44,18 @@ class RunScoreboard(SampleBase):
                         time.sleep(60)
                         continue
                 except ValueError as e:
-                    logging.error("Ln: 46 " + str(e))
+                    logging.error("Ln: 47 " + str(e))
                     time.sleep(60)
                     continue
  
-            # Single custom match setup
+            # Custom matches
             if config['state'] == "2":
+
                 with open('/home/pi/rpi-led-scoreboard/custom_matches.json') as json_file_custom_matches:
                     try:
                         data = json.load(json_file_custom_matches)
-                    except ValueError as e:
-                        logging.error("Ln: 56 " + str(e))
+                    except Exception as e:
+                        logging.error("Ln: 61 " + str(e))
                         time.sleep(60)
                         continue
                 for fixture in data:
@@ -67,7 +69,7 @@ class RunScoreboard(SampleBase):
                         time.sleep(60)
                         continue
                 except ValueError as e:
-                    logging.error("Ln: 68 " + str(valid_matches) + " " + str(e))
+                    logging.error("Ln: 75 " + str(valid_matches) + " " + str(e))
                     time.sleep(60)
                     continue
 
@@ -88,9 +90,9 @@ class RunScoreboard(SampleBase):
                                     image_weather_icon = Image.open(weather_icon)
                                     matrix.SetImage(image_weather_icon.convert('RGB'), 0, 8)
                                 except OSError as e:
-                                    logging.error("Ln: 85 " + str(e))
+                                    logging.error("Ln: 92 " + str(e))
                                 except Exception as e:
-                                    logging.error("Ln: 87 " + str(e))
+                                    logging.error("Ln: 94 " + str(e))
                                 # Temp
                                 fontTemp = graphics.Font()
                                 fontTemp.LoadFont("/home/pi/rpi-led-scoreboard/fonts/5x7.bdf")
@@ -105,7 +107,7 @@ class RunScoreboard(SampleBase):
                                 weather_conditions = weather['weather'][0]['main']
                                 graphics.DrawText(matrix, fontConditions, 0, 10, yellow, weather_conditions)
                     except Exception as e:
-                        logging.error("Ln: 107 " + str(e))
+                        logging.error("Ln: 109 " + str(e))
                     
 
                 # Time
@@ -149,8 +151,12 @@ def single_match_display(_matrix, _fixture):
         image_away = Image.open(DEFAULT_CLUB_CREST)
 
     match_status = _fixture['status']
-    match_start_time = _fixture['start-time']                
-        
+    match_start_time = _fixture['start-time']    
+    match_start_date = ""
+    
+    if( 'start-date' in _fixture):
+        match_start_date = _fixture['start-date']    
+            
     _matrix.SetImage(image_home.convert('RGB'), -16, 0)
     _matrix.SetImage(image_away.convert('RGB'), 48, 0)
 
@@ -162,12 +168,34 @@ def single_match_display(_matrix, _fixture):
     green = graphics.Color(0, 255, 0)
     fontStatus = graphics.Font()
     fontStatus.LoadFont("/home/pi/rpi-led-scoreboard/fonts/6x13B.bdf")
+    font_width = 6
     if match_status == "" :
         text_len = len(match_start_time)
-        graphics.DrawText(_matrix, fontStatus, 32-(6* (text_len / 2)), 20, green, "{0}".format(match_start_time) )
+        graphics.DrawText(_matrix, fontStatus, 32-(font_width * (text_len / 2)), 20, green, "{0}".format(match_start_time) )
     else:
         text_len = len(match_status)
-        graphics.DrawText(_matrix, fontStatus, 32-(6* (text_len / 2)), 20, green, "{0}".format(match_status) )
+        if text_len > 5 :
+            font_width = 5
+
+            image = Image.new("RGB", ( (font_width * text_len)+1, 8))
+            draw = ImageDraw.Draw(image)
+            draw.rectangle((0, 0, (font_width *text_len)+1, 8), fill=(0, 0, 0), outline=(0, 0, 0))
+            _matrix.SetImage(image, 31-(font_width * (text_len / 2)), 13)
+
+            fontStatus.LoadFont("/home/pi/rpi-led-scoreboard/fonts/5x8.bdf")
+        graphics.DrawText(_matrix, fontStatus, 32-(font_width * (text_len / 2)), 20, green, "{0}".format(match_status) )
+
+    if match_start_date != "" :
+        text_len = len(match_start_date)
+        
+        image = Image.new("RGB", ((5 * text_len)+1, 8))
+        draw = ImageDraw.Draw(image)
+        draw.rectangle((0, 0, (5*text_len)+1, 8), fill=(0, 0, 0), outline=(0, 0, 0))
+        _matrix.SetImage(image, 31-(5* (text_len / 2)), 24)
+
+        fontStartDate = graphics.Font()
+        fontStartDate.LoadFont("/home/pi/rpi-led-scoreboard/fonts/5x7.bdf")
+        graphics.DrawText(_matrix, fontStartDate, 32-(5* (text_len / 2)), 31, yellow, "{0}".format(match_start_date) )
     time.sleep(30)
 
 # Main function
@@ -186,5 +214,5 @@ if __name__ == "__main__":
         if (not run_scoreboard.process()):
             run_scoreboard.print_help()
     except Exception as e:
-        logging.error("Ln: 180 " + str(e))
+        logging.error("Ln: 216 " + str(e))
     logging.info('Finished')
