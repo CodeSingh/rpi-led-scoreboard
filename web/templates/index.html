@@ -6,7 +6,7 @@
       <h1>Scoreboard Configurator</h1>
       <p><form action = "/reboot" method = "post"><input type = "submit" value = "Reboot" /></form></p>
       <p><form action = "/shutdown" method = "post"><input type = "submit" value = "Shutdown" /></form></p>
-      <form action = "/update" method = "post"><input type = "submit" value = "Update Scoreboard Software" /></form>
+      <form action = "/update" method = "post"><input type = "submit" value = "Update Scoreboard Software (Admin Only)"  onclick="return confirm('This could break your scoreboard. Are you sure you want to continue?');"/></form>
       <form action = "/save" method = "post">
          <p><label for="state">Status:</label>
             <input type="radio" id="on" name="state" value="1" {{'checked' if data.state == '1' else ''}} />ON
