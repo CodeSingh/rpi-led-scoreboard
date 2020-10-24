@@ -14,7 +14,7 @@ class BBC_EPL_Livescore(Livescore):
 
     def get_live_score(self):
     
-        self.LIVESCORE_URL = 'https://www.bbc.co.uk/sport/football/fa-cup/scores-fixtures'
+        self.LIVESCORE_URL = 'https://www.bbc.com/sport/football/fa-cup/scores-fixtures'
 
         self.now = datetime.now() # current date and time
         self.url = self.LIVESCORE_URL + '?' + self.now.strftime("%Y%m%d%h%M%s")
