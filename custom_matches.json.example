@@ -4,7 +4,27 @@
     "status": "2 PENS 3",
     "start-time": "",
     "start-date": "25.05.05",
-    "location": "Istanbul",
+    "location": "ISTANBUL",
     "score-away": "3",
     "score-home": "3"
+},
+{
+    "team-away": "Bayern Munich",
+    "team-home": "Manchester United",
+    "status": "FT",
+    "start-time": "",
+    "start-date": "26.05.99",
+    "location": "BARCELONA",
+    "score-away": "1",
+    "score-home": "2"
+},
+{
+    "team-away": "Bayern Munich",
+    "team-home": "Chelsea",
+    "status": "4 PENS 3",
+    "start-time": "",
+    "start-date": "19.05.12",
+    "location": "MUNICH",
+    "score-away": "1",
+    "score-home": "1"
 }]

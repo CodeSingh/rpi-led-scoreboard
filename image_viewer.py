@@ -153,10 +153,14 @@ def single_match_display(_matrix, _fixture):
     match_status = _fixture['status']
     match_start_time = _fixture['start-time']    
     match_start_date = ""
+    match_location = ""
     
     if( 'start-date' in _fixture):
         match_start_date = _fixture['start-date']    
-            
+
+    if( 'location' in _fixture):
+        match_location = _fixture['location']
+
     _matrix.SetImage(image_home.convert('RGB'), -16, 0)
     _matrix.SetImage(image_away.convert('RGB'), 48, 0)
 
@@ -185,17 +189,35 @@ def single_match_display(_matrix, _fixture):
             fontStatus.LoadFont("/home/pi/rpi-led-scoreboard/fonts/5x8.bdf")
         graphics.DrawText(_matrix, fontStatus, 32-(font_width * (text_len / 2)), 20, green, "{0}".format(match_status) )
 
-    if match_start_date != "" :
-        text_len = len(match_start_date)
-        
-        image = Image.new("RGB", ((5 * text_len)+1, 8))
-        draw = ImageDraw.Draw(image)
-        draw.rectangle((0, 0, (5*text_len)+1, 8), fill=(0, 0, 0), outline=(0, 0, 0))
-        _matrix.SetImage(image, 31-(5* (text_len / 2)), 24)
+    text_len = len(match_start_date)
+    
+    image = Image.new("RGB", ((5 * text_len)+1, 8))
+    draw = ImageDraw.Draw(image)
+    draw.rectangle((0, 0, (5*text_len)+1, 8), fill=(0, 0, 0), outline=(0, 0, 0))
+    _matrix.SetImage(image, 31-(5* (text_len / 2)), 24)
 
-        fontStartDate = graphics.Font()
-        fontStartDate.LoadFont("/home/pi/rpi-led-scoreboard/fonts/5x7.bdf")
-        graphics.DrawText(_matrix, fontStartDate, 32-(5* (text_len / 2)), 31, yellow, "{0}".format(match_start_date) )
+    fontStartDate = graphics.Font()
+    fontStartDate.LoadFont("/home/pi/rpi-led-scoreboard/fonts/5x7.bdf")
+    graphics.DrawText(_matrix, fontStartDate, 32-(5* (text_len / 2)), 31, yellow, "{0}".format(match_start_date) )
+
+    time.sleep(5)
+    # Blank out date so it doesn't show behind location
+    image = Image.new("RGB", ((5 * text_len)+1, 8))
+    draw = ImageDraw.Draw(image)
+    draw.rectangle((0, 0, (5*text_len)+1, 8), fill=(0, 0, 0), outline=(0, 0, 0))
+    _matrix.SetImage(image, 31-(5* (text_len / 2)), 24)
+
+    text_len = len(match_location)
+    
+    image = Image.new("RGB", ((5 * text_len)+1, 8))
+    draw = ImageDraw.Draw(image)
+    draw.rectangle((0, 0, (5*text_len)+1, 8), fill=(0, 0, 0), outline=(0, 0, 0))
+    _matrix.SetImage(image, 31-(5* (text_len / 2)), 24)
+
+    fontLocation = graphics.Font()
+    fontLocation.LoadFont("/home/pi/rpi-led-scoreboard/fonts/5x7.bdf")
+    graphics.DrawText(_matrix, fontLocation, 32-(5* (text_len / 2)), 31, yellow, "{0}".format(match_location) )
+
     time.sleep(30)
 
 # Main function
