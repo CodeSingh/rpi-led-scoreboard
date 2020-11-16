@@ -9,7 +9,7 @@ import os
 import time
 import sys
 sys.path.append('/home/pi/rpi-led-scoreboard/')
-from config_update import get_config, set_config
+from config_update import get_config, set_config, get_custom_config, set_custom_config
 import constants as c
 from livescore_manager import LivescoreManager
 
@@ -18,7 +18,7 @@ app = Flask(__name__)
 def index():
    livescore = LivescoreManager()
    competitions = livescore.get_competitions()
-   model_index = { "teams" : c.DICT_TEAMS, "competitions": competitions, "data" : get_config(), "temp_types": c.DICT_TEMP_TYPES}
+   model_index = { "teams" : c.DICT_TEAMS, "competitions": competitions, "data" : get_config(), "temp_types": c.DICT_TEMP_TYPES, "custom_matches": get_custom_config() }
 
    print(model_index)
    return render_template('index.html', **model_index)
@@ -71,6 +71,29 @@ def create_config_files(state):
       if not os.path.isfile('/home/pi/rpi-led-scoreboard/custom_matches.json'):
          os.system('cp -a /home/pi/rpi-led-scoreboard/custom_matches.json.example /home/pi/rpi-led-scoreboard/custom_matches.json')
 
+@app.route('/update_custom_matches',methods = ['POST'])
+def update_custom_matches():
+   print(request)
+   if request.method == 'POST':
+      headers = ('team-home', 'team-away', 'status', 'start-time', 'start-date', 'location', 'score-home', 'score-away')
+      values = (
+        request.form.getlist('team-home[]'),
+        request.form.getlist('team-away[]'),
+        request.form.getlist('status[]'),         
+        request.form.getlist('start-time[]'),         
+        request.form.getlist('start-date[]'),         
+        request.form.getlist('location[]'), 
+        request.form.getlist('score-home[]'), 
+        request.form.getlist('score-away[]')             
+      )
+      
+      items = [{} for i in range(len(values[0]))]
+      for x,i in enumerate(values):
+         for _x,_i in enumerate(i):
+            items[_x][headers[x]] = _i
+      config = items
+      set_custom_config(config)
+   return redirect(url_for('index'))
 
 if __name__ == "__main__":
-   app.run(host='0.0.0.0', port=80, debug=False)
+   app.run(host='0.0.0.0', port=80, debug=True)

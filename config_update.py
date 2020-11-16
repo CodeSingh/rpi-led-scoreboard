@@ -12,6 +12,7 @@ import score_update
 import weather_update
 
 PATH_TO_CONFIG_JSON = '/home/pi/rpi-led-scoreboard/config.json' 
+PATH_TO_CUSTOM_CONFIG_JSON = '/home/pi/rpi-led-scoreboard/custom_matches.json' 
 
 def clear_term():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -25,7 +26,17 @@ def set_config(json_content):
     with open(PATH_TO_CONFIG_JSON,'w') as jsonfile:
         json.dump(json_content, jsonfile, indent=4) # you decide the indentation level    
 
+def get_custom_config():
+    if os.path.isfile(PATH_TO_CUSTOM_CONFIG_JSON):
+        with open(PATH_TO_CUSTOM_CONFIG_JSON,'r') as jsonfile:
+            json_content = json.load(jsonfile)
+            return json_content
+    else:
+        return None
 
+def set_custom_config(json_content):
+    with open(PATH_TO_CUSTOM_CONFIG_JSON,'w') as jsonfile:
+        json.dump(json_content, jsonfile, indent=4) # you decide the indentation level    
 
 if __name__ == "__main__":
     config = get_config()

@@ -39,5 +39,40 @@
          <p><label for="weather_location">Weather Location:</label><input type = "text" name = "weather_location" value="{{ data.weather_location }}"/></p>
          <p><input type = "submit" value = "submit" /></p>
       </form>
+      {% if custom_matches %}
+         <form action = "/update_custom_matches" method = "post">
+            <h2>Custom Matches</h2>
+            {%for match in custom_matches %} 
+            <p><label for="team-home[]">Team Home:</label>
+               <input type = "text" name = "team-home[]" value="{{ match['team-home'] }}"/>
+            </p>
+            <p><label for="team-away[]">Team Away:</label>
+               <input type = "text" name = "team-away[]" value="{{ match['team-away'] }}"/>
+            </p>
+            <p><label for="status[]">Status:</label>
+               <input type = "text" name = "status[]" value="{{ match.status }}"/>
+            </p>
+            <p><label for="start-time[]">Start Time:</label>
+               <input type = "text" name = "start-time[]" value="{{ match['start-time'] }}"/>
+            </p>
+            <p><label for="start-date[]">Start Date:</label>
+               <input type = "text" name = "start-date[]" value="{{ match['start-date']  }}"/>
+            </p>
+            <p><label for="location[]">Location:</label>
+               <input type = "text" name = "location[]" value="{{ match.location }}"/>
+            </p>
+            <p><label for="score-home[]">Score Home:</label>
+               <input type = "text" name = "score-home[]" value="{{ match['score-home'] }}"/>
+            </p>
+            <p><label for="score-away[]">Score Away:</label>
+               <input type = "text" name = "score-away[]" value="{{ match['score-away'] }}"/>
+            </p>
+            <hr />
+            {%endfor%}
+            <p><input type = "submit" value = "submit" /></p> 
+         </form>
+
+      {% endif %}
+
    </body>
 </html>

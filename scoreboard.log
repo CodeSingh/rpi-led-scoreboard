@@ -148,3 +148,37 @@
 2020-10-28 19:54:05,164  root  INFO: Started
 2020-11-02 21:35:37,161  root  INFO: Started
 2020-11-02 22:01:35,897  root  INFO: Started
+2020-11-11 19:43:33,435  root  INFO: Started
+2020-11-11 21:01:51,525  root  INFO: Started
+2020-11-11 21:08:07,104  root  INFO: Started
+2020-11-11 21:36:21,045  root  INFO: Started
+2020-11-11 21:59:13,011  root  INFO: Started
+2020-11-11 22:24:59,294  root  INFO: Started
+2020-11-13 23:00:21,955  root  INFO: Started
+2020-11-15 00:14:20,690  root  INFO: Started
+2020-11-15 00:33:16,465  root  INFO: Started
+2020-11-15 00:39:42,102  root  INFO: Started
+2020-11-15 00:53:27,229  root  INFO: Started
+2020-11-15 19:45:43,690  root  INFO: Started
+2020-11-15 20:04:22,246  root  INFO: Started
+2020-11-15 20:28:28,296  root  INFO: Started
+2020-11-15 20:53:45,007  root  INFO: Started
+2020-11-15 21:08:19,654  root  ERROR: Ln: 216 string indices must be integers
+2020-11-15 21:08:19,671  root  INFO: Finished
+2020-11-16 19:48:24,211  root  INFO: Started
+2020-11-16 21:11:31,220  root  INFO: Started
+2020-11-16 21:34:54,153  root  ERROR: Ln: 216 'team-home'
+2020-11-16 21:34:54,168  root  INFO: Finished
+2020-11-16 21:56:17,216  root  INFO: Started
+2020-11-16 22:10:41,307  root  ERROR: Ln: 216 'start-time'
+2020-11-16 22:10:41,316  root  INFO: Finished
+2020-11-16 22:16:20,904  root  INFO: Started
+2020-11-16 22:16:24,596  root  ERROR: Ln: 216 'start-time'
+2020-11-16 22:16:24,643  root  INFO: Finished
+2020-11-16 22:17:33,090  root  INFO: Started
+2020-11-16 22:17:37,235  root  ERROR: Ln: 216 'start-time'
+2020-11-16 22:17:37,267  root  INFO: Finished
+2020-11-16 22:25:23,756  root  INFO: Started
+2020-11-16 22:25:27,907  root  ERROR: Ln: 216 'start-time'
+2020-11-16 22:25:27,958  root  INFO: Finished
+2020-11-16 22:27:44,489  root  INFO: Started
