@@ -2,7 +2,7 @@
 Code based on work by Matt Richardson 
 for details, visit:  http://mattrichardson.com/Raspberry-Pi-Flask/
 '''
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 import datetime
 import json
 import os
@@ -14,6 +14,10 @@ import constants as c
 from livescore_manager import LivescoreManager
 
 app = Flask(__name__)
+
+app.config['IMAGE_UPLOADS'] = '/home/pi/rpi-led-scoreboard/img/teams'
+app.config['ALLOWED_IMAGE_EXTENSIONS'] = ['PNG']
+
 @app.route("/")
 def index():
    livescore = LivescoreManager()
@@ -94,6 +98,54 @@ def update_custom_matches():
       config = items
       set_custom_config(config)
    return redirect(url_for('index'))
+
+@app.route("/upload-image", methods=["POST"])
+def upload_image():
+
+   if request.method == "POST":
+
+      if request.files:
+
+         image = request.files["image"]
+
+         if image.filename == "":
+            print("No filename")
+            return redirect(url_for('index'))
+
+         if allowed_image(image.filename):
+            filename = image.filename
+
+            image.save(os.path.join(app.config["IMAGE_UPLOADS"], filename))
+            os.chown(os.path.join(app.config["IMAGE_UPLOADS"], filename), 1000, 1000)
+
+            print("Image saved")
+
+            return redirect(url_for('index'))
+
+         else:
+            print("That file extension is not allowed")
+            return redirect(url_for('index'))
+
+@app.route('/team-uploads/<path:filename>')
+def download_file(filename):
+    return send_from_directory(app.config['IMAGE_UPLOADS'],
+                               filename, as_attachment=True)
+
+def allowed_image(filename):
+
+   # We only want files with a . in the filename
+   if not "." in filename:
+      return False
+
+   # Split the extension from the filename
+   ext = filename.rsplit(".", 1)[1]
+
+   # Check if the extension is in ALLOWED_IMAGE_EXTENSIONS
+   if ext.upper() in app.config["ALLOWED_IMAGE_EXTENSIONS"]:
+      return True
+   else:
+      return False
+
 
 if __name__ == "__main__":
    app.run(host='0.0.0.0', port=80, debug=True)

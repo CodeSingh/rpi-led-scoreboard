@@ -13,6 +13,7 @@ import weather_update
 
 PATH_TO_CONFIG_JSON = '/home/pi/rpi-led-scoreboard/config.json' 
 PATH_TO_CUSTOM_CONFIG_JSON = '/home/pi/rpi-led-scoreboard/custom_matches.json' 
+PATH_TO_TEAM_BADGE_IMAGES = '/home/pi/rpi-led-scoreboard/img/teams/' 
 
 def clear_term():
     os.system('cls' if os.name == 'nt' else 'clear')

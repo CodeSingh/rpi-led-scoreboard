@@ -40,14 +40,30 @@
          <p><input type = "submit" value = "submit" /></p>
       </form>
       {% if custom_matches %}
+         <form action="/upload-image" method="POST" enctype="multipart/form-data">
+
+            <div class="form-group">
+            <label>Select Football team badges for custom matches</label>
+            <div class="custom-file">
+               <input type="file" class="custom-file-input" name="image" id="image">
+               <label class="custom-file-label" for="image">Select image (32px x 32px PNG file only)...</label>
+            </div>
+            </div>
+   
+            <button type="submit" class="btn btn-primary">Upload</button>
+   
+         </form>
+
          <form action = "/update_custom_matches" method = "post">
             <h2>Custom Matches</h2>
             {%for match in custom_matches %} 
             <p><label for="team-home[]">Team Home:</label>
                <input type = "text" name = "team-home[]" value="{{ match['team-home'] }}"/>
+               <img src="{{ url_for('download_file', filename=match['team-home'] + '.png') }}" />
             </p>
             <p><label for="team-away[]">Team Away:</label>
                <input type = "text" name = "team-away[]" value="{{ match['team-away'] }}"/>
+               <img src="{{ url_for('download_file', filename=match['team-away'] + '.png') }}" />
             </p>
             <p><label for="status[]">Status:</label>
                <input type = "text" name = "status[]" value="{{ match.status }}"/>
