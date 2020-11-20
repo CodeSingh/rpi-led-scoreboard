@@ -57,38 +57,89 @@
          <form action = "/update_custom_matches" method = "post">
             <h2>Custom Matches</h2>
             {%for match in custom_matches %} 
-            <p><label for="team-home[]">Team Home:</label>
-               <input type = "text" name = "team-home[]" value="{{ match['team-home'] }}"/>
-               <img src="{{ url_for('download_file', filename=match['team-home'] + '.png') }}" />
-            </p>
-            <p><label for="team-away[]">Team Away:</label>
-               <input type = "text" name = "team-away[]" value="{{ match['team-away'] }}"/>
-               <img src="{{ url_for('download_file', filename=match['team-away'] + '.png') }}" />
-            </p>
-            <p><label for="status[]">Status:</label>
-               <input type = "text" name = "status[]" value="{{ match.status }}"/>
-            </p>
-            <p><label for="start-time[]">Start Time:</label>
-               <input type = "text" name = "start-time[]" value="{{ match['start-time'] }}"/>
-            </p>
-            <p><label for="start-date[]">Start Date:</label>
-               <input type = "text" name = "start-date[]" value="{{ match['start-date']  }}"/>
-            </p>
-            <p><label for="location[]">Location:</label>
-               <input type = "text" name = "location[]" value="{{ match.location }}"/>
-            </p>
-            <p><label for="score-home[]">Score Home:</label>
-               <input type = "text" name = "score-home[]" value="{{ match['score-home'] }}"/>
-            </p>
-            <p><label for="score-away[]">Score Away:</label>
-               <input type = "text" name = "score-away[]" value="{{ match['score-away'] }}"/>
-            </p>
-            <hr />
+               <div>
+                  <button type="button" onclick="removeMatch(this);">-</button>
+                  <p><label for="team-home[]">Team Home:</label>
+                     <input type = "text" name = "team-home[]" value="{{ match['team-home'] }}"/>*
+                     <img src="{{ url_for('download_file', filename=match['team-home'] + '.png') }}" />
+                  </p>
+                  <p><label for="team-away[]">Team Away:</label>
+                     <input type = "text" name = "team-away[]" value="{{ match['team-away'] }}"/>*
+                     <img src="{{ url_for('download_file', filename=match['team-away'] + '.png') }}" />
+                  </p>
+                  <p><label for="status[]">Status:</label>
+                     <input type = "text" name = "status[]" value="{{ match.status }}"/>*
+                  </p>
+                  <p><label for="start-time[]">Start Time:</label>
+                     <input type = "text" name = "start-time[]" value="{{ match['start-time'] }}"/>
+                  </p>
+                  <p><label for="start-date[]">Start Date:</label>
+                     <input type = "text" name = "start-date[]" value="{{ match['start-date']  }}"/>*
+                  </p>
+                  <p><label for="location[]">Location:</label>
+                     <input type = "text" name = "location[]" value="{{ match.location }}"/>*
+                  </p>
+                  <p><label for="score-home[]">Score Home:</label>
+                     <input type = "text" name = "score-home[]" value="{{ match['score-home'] }}"/>*
+                  </p>
+                  <p><label for="score-away[]">Score Away:</label>
+                     <input type = "text" name = "score-away[]" value="{{ match['score-away'] }}"/>*
+                  </p>
+                  <hr />
+               </div>
             {%endfor%}
+            <h2>New Match</h2><button type="button" onclick="addNewMatch();">+</button>
+            <div id="new-matches">
+
+
+            </div>
             <p><input type = "submit" value = "submit" /></p> 
          </form>
 
       {% endif %}
 
    </body>
+   <script type="text/javascript">
+      function removeMatch(el)
+      {
+         el.parentNode.remove();
+      }
+      function addNewMatch()
+      {
+         var newMatchHTML = `
+            <p><label for="team-home[]">Team Home:</label>
+                  <input type = "text" name = "team-home[]" value=""/>*
+               </p>
+               <p><label for="team-away[]">Team Away:</label>
+                  <input type = "text" name = "team-away[]" value=""/>*
+               </p>
+               <p><label for="status[]">Status:</label>
+                  <input type = "text" name = "status[]" value=""/>*
+               </p>
+               <p><label for="start-time[]">Start Time:</label>
+                  <input type = "text" name = "start-time[]" value=""/>
+               </p>
+               <p><label for="start-date[]">Start Date:</label>
+                  <input type = "text" name = "start-date[]" value=""/>*
+               </p>
+               <p><label for="location[]">Location:</label>
+                  <input type = "text" name = "location[]" value=""/>*
+               </p>
+               <p><label for="score-home[]">Score Home:</label>
+                  <input type = "text" name = "score-home[]" value=""/>*
+               </p>
+               <p><label for="score-away[]">Score Away:</label>
+                  <input type = "text" name = "score-away[]" value=""/>*
+               </p>
+               <hr />
+         `
+         var elem = document.querySelector('#new-matches');
+
+         // Get HTML content
+         var html = elem.innerHTML;
+
+         // Set HTML content
+         elem.innerHTML += newMatchHTML
+      }
+   </script>
 </html>
