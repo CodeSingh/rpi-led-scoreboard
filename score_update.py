@@ -27,14 +27,14 @@ def all_matches(live_score_type):
     livescore_class = livescore.get_live_score_class(live_score_type, ALL_TEAMS)
     api_fixture = livescore_class.get_all_fixtures()
 
-    with open(PATH_TO_ALL_MATCHES_JSON,'r') as jsonfile:
-        json_content = json.load(jsonfile) # this is now in memory! you can use it outside 'open'
+    #with open(PATH_TO_ALL_MATCHES_JSON,'r') as jsonfile:
+    #    json_content = json.load(jsonfile) # this is now in memory! you can use it outside 'open'
 
     # add the id key-value pair (rmbr that it already has the "name" key value)
-    json_content = api_fixture
+    #json_content = api_fixture
 
     with open(PATH_TO_ALL_MATCHES_JSON,'w') as jsonfile:
-        json.dump(json_content, jsonfile, indent=4) # you decide the indentation level
+        json.dump(api_fixture, jsonfile, indent=4) # you decide the indentation level
 
 def single_match(live_score_type, team):
     PATH_TO_MATCH_JSON = '/home/pi/rpi-led-scoreboard/match.json' 
