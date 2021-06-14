@@ -2,6 +2,7 @@
 sudo apt-get install python3-pil -y
 sudo apt-get install python3-bs4 -y
 sudo apt-get install python3-flask -y
+sudo apt-get install python3-pip -y
 
 cd /home/pi/
 git clone https://github.com/hzeller/rpi-rgb-led-matrix.git # Not sudo so that changes can be made easily after install

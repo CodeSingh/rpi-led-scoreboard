@@ -5,17 +5,17 @@ from datetime import datetime
 import time
 from .livescore import Livescore
 
-class BBC_EPL_Livescore(Livescore):
+class BBC_EURO2020_Livescore(Livescore):
 
-    ID = "BBC_FAC"
-    NAME = "BBC English FA Cup"
+    ID = "BBC_EURO2020"
+    NAME = "BBC Euro 2020"
 
     def __init__(self, team):
         self.team = team
 
     def get_live_score(self):
     
-        self.LIVESCORE_URL = 'https://www.bbc.com/sport/football/fa-cup/scores-fixtures'
+        self.LIVESCORE_URL = 'https://www.bbc.co.uk/sport/football/european-championship/scores-fixtures'
 
         self.now = datetime.now() # current date and time
         self.url = self.LIVESCORE_URL + '?' + self.now.strftime("%Y%m%d%h%M%s")
@@ -74,7 +74,7 @@ class BBC_EPL_Livescore(Livescore):
         return self.my_fixture
     def get_all_fixtures(self):
     
-        self.LIVESCORE_URL = 'https://www.bbc.co.uk/sport/football/fa-cup/scores-fixtures/'
+        self.LIVESCORE_URL = 'https://www.bbc.co.uk/sport/football/european-championship/scores-fixtures'
         
         self.now = datetime.now() # current date and time
         self.url = self.LIVESCORE_URL + '?' + self.now.strftime("%Y-%m-%d")

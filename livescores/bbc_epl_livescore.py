@@ -84,7 +84,6 @@ class BBC_EPL_Livescore(Livescore):
         self.now = datetime.now() # current date and time
         self.url = self.LIVESCORE_URL + '?' + self.now.strftime("%Y-%m-%d")
         self.page = requests.get(self.url)
-        print(self.url)
         self.soup = BeautifulSoup(self.page.text, "lxml")
 
         self.all_my_fixtures = []

@@ -1,26 +1,26 @@
 [
     {
-        "team-home": "Southampton",
-        "team-away": "Manchester United",
-        "score-home": "2",
-        "score-away": "3",
-        "status": "FT",
-        "start-time": ""
-    },
-    {
-        "team-home": "Chelsea",
-        "team-away": "Tottenham Hotspur",
+        "team-home": "Scotland",
+        "team-away": "Czech Republic",
         "score-home": "0",
-        "score-away": "0",
+        "score-away": "2",
         "status": "FT",
         "start-time": ""
     },
     {
-        "team-home": "Arsenal",
-        "team-away": "Wolverhampton Wanderers",
+        "team-home": "Poland",
+        "team-away": "Slovakia",
         "score-home": "1",
         "score-away": "2",
         "status": "FT",
+        "start-time": ""
+    },
+    {
+        "team-home": "Spain",
+        "team-away": "Sweden",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "27'",
         "start-time": ""
     }
 ]
