@@ -1,26 +1,18 @@
 [
     {
-        "team-home": "Scotland",
-        "team-away": "Czech Republic",
+        "team-home": "Hungary",
+        "team-away": "Portugal",
         "score-home": "0",
-        "score-away": "2",
+        "score-away": "3",
         "status": "FT",
         "start-time": ""
     },
     {
-        "team-home": "Poland",
-        "team-away": "Slovakia",
-        "score-home": "1",
-        "score-away": "2",
-        "status": "FT",
-        "start-time": ""
-    },
-    {
-        "team-home": "Spain",
-        "team-away": "Sweden",
+        "team-home": "France",
+        "team-away": "Germany",
         "score-home": "0",
         "score-away": "0",
-        "status": "27'",
-        "start-time": ""
+        "status": "",
+        "start-time": "20:00"
     }
 ]

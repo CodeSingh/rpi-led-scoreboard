@@ -44,8 +44,11 @@ def shutdown():
 @app.route('/update',methods = ['POST'])
 def update():
    if request.method == 'POST':
+      os.system('sudo chown pi:pi ' + c.BASE_PATH_SCOREBOARD + '*')
       os.chdir(c.BASE_PATH_SCOREBOARD)
-      os.system('sudo -u pi git pull origin master')
+      os.system('sudo -u pi git fetch origin master')
+      os.system('sudo -u pi git reset --hard FETCH_HEAD')
+      os.system('sudo -u pi git clean -df')
       os.system('sudo reboot')
 
       return redirect(url_for('index'))
