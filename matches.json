@@ -10,9 +10,9 @@
     {
         "team-home": "France",
         "team-away": "Germany",
-        "score-home": "0",
+        "score-home": "1",
         "score-away": "0",
-        "status": "",
-        "start-time": "20:00"
+        "status": "FT",
+        "start-time": ""
     }
 ]
