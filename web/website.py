@@ -51,7 +51,8 @@ def update():
       os.system('sudo -u pi git fetch origin master')
       os.system('sudo -u pi git reset --hard FETCH_HEAD')
       os.system('sudo -u pi git clean -df')
-      os.system('sudo -u pi apt-get install python3-tz -y')
+      os.system('sudo apt-get install python3-tz -y')
+      os.system('sudo -u pi cp /home/pi/rpi-led-scoreboard/config.json.example /home/pi/rpi-led-scoreboard/config.json')
       os.system('sudo reboot')
 
       return redirect(url_for('index'))
