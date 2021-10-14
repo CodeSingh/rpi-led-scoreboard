@@ -7,9 +7,9 @@ from .livescore import Livescore
 
 class BBC_EURO2020_Livescore(Livescore):
 
-    ID = "BBC_EURO2020"
-    NAME = "BBC Euro 2020"
-    LIVESCORE_URL = 'https://www.bbc.co.uk/sport/football/european-championship/scores-fixtures'
+    ID = "BBC_MLS"
+    NAME = "BBC Major League Soccer"
+    LIVESCORE_URL = 'https://www.bbc.co.uk/sport/football/us-major-league/scores-fixtures'
 
     def __init__(self, team):
         self.team = team

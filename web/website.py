@@ -7,6 +7,7 @@ import datetime
 import json
 import os
 import time
+import pytz
 import sys
 sys.path.append('/home/pi/rpi-led-scoreboard/')
 from config_update import get_config, set_config, get_custom_config, set_custom_config
@@ -17,12 +18,13 @@ app = Flask(__name__)
 
 app.config['IMAGE_UPLOADS'] = '/home/pi/rpi-led-scoreboard/img/teams'
 app.config['ALLOWED_IMAGE_EXTENSIONS'] = ['PNG']
+app.config['ALL_TIMEZONES'] = pytz.common_timezones
 
 @app.route("/")
 def index():
    livescore = LivescoreManager()
    competitions = livescore.get_competitions()
-   model_index = { "teams" : c.DICT_TEAMS, "competitions": competitions, "data" : get_config(), "temp_types": c.DICT_TEMP_TYPES, "custom_matches": get_custom_config() }
+   model_index = { "teams" : c.DICT_TEAMS, "competitions": competitions, "data" : get_config(), "temp_types": c.DICT_TEMP_TYPES, "custom_matches": get_custom_config(), "timezones": app.config['ALL_TIMEZONES'] }
 
    print(model_index)
    return render_template('index.html', **model_index)
@@ -49,6 +51,7 @@ def update():
       os.system('sudo -u pi git fetch origin master')
       os.system('sudo -u pi git reset --hard FETCH_HEAD')
       os.system('sudo -u pi git clean -df')
+      os.system('sudo -u pi apt-get install python3-tz -y')
       os.system('sudo reboot')
 
       return redirect(url_for('index'))
@@ -63,6 +66,7 @@ def save():
       config['live_score_type'] = request.form['live_score_type']
       config['weather_api_key'] = request.form['weather_api_key']
       config['weather_api_units'] = request.form['weather_api_units']
+      config['timezone'] = request.form['timezone']
 
       create_config_files(config['state'])
 

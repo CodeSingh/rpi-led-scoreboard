@@ -20,7 +20,15 @@
                   <option value="{{teams[key]}}" {{'selected' if teams[key] == data.team}}>{{teams[key]}}</option> 
                {%endfor%} 
             </select>
-            
+         </p>
+
+         <p>
+            <label for="timezone">Time Zone:</label>
+            <select name = "timezone">
+               {%for zone in timezones %} 
+                  <option value="{{zone}}" {{'selected' if zone == data.timezone}}>{{zone}}</option> 
+               {%endfor%} 
+            </select>
          </p>
          <p>
             <label for="live_score_type">Live Score Type:</label>
