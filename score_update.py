@@ -37,12 +37,12 @@ def all_matches(live_score_type):
     user_tz = get_user_tz()
 
     for fixture in api_fixture:
+        if(fixture["start-time"] != ""):
+            start_time = datetime.strptime(fixture["start-time"] + " 1980", '%H:%M %Y')
+            gmt_start_time = gmt.localize(start_time)
 
-        start_time = datetime.strptime(fixture["start-time"] + " 1980", '%H:%M %Y')
-        gmt_start_time = gmt.localize(start_time)
-
-        user_start_time = gmt_start_time.astimezone(user_tz)
-        fixture["start-time"] = user_start_time.strftime("%H:%M")
+            user_start_time = gmt_start_time.astimezone(user_tz)
+            fixture["start-time"] = user_start_time.strftime("%H:%M")
 
     with open(PATH_TO_ALL_MATCHES_JSON,'w') as jsonfile:
         json.dump(api_fixture, jsonfile, indent=4) # you decide the indentation level
