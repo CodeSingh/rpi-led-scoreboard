@@ -5,7 +5,7 @@ from datetime import datetime
 import time
 from .livescore import Livescore
 
-class BBC_EURO2020_Livescore(Livescore):
+class BBC_MLS_Livescore(Livescore):
 
     ID = "BBC_MLS"
     NAME = "BBC Major League Soccer"

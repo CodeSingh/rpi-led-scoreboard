@@ -57,7 +57,6 @@ class Livescore:
 
                     if self.fixture.find("span", class_="sp-c-fixture__number--time"):
                         start_time = self.fixture.find("span", class_="sp-c-fixture__number--time").text
-                        start_time = time.strptime(start_time, "%H:%M").date()
                         my_fixture["start-time"] = start_time
                     else:
                         my_fixture["start-time"] = ""

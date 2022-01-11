@@ -1,58 +1,18 @@
 [
     {
-        "team-home": "Watford",
-        "team-away": "Liverpool",
-        "score-home": "0",
-        "score-away": "5",
-        "status": "FT",
-        "start-time": ""
-    },
-    {
-        "team-home": "Aston Villa",
-        "team-away": "Wolverhampton Wanderers",
-        "score-home": "2",
-        "score-away": "3",
-        "status": "FT",
-        "start-time": ""
-    },
-    {
-        "team-home": "Leicester City",
-        "team-away": "Manchester United",
-        "score-home": "4",
-        "score-away": "2",
-        "status": "FT",
-        "start-time": ""
-    },
-    {
-        "team-home": "Manchester City",
-        "team-away": "Burnley",
-        "score-home": "2",
-        "score-away": "0",
-        "status": "FT",
-        "start-time": ""
-    },
-    {
-        "team-home": "Norwich City",
-        "team-away": "Brighton & Hove Albion",
-        "score-home": "0",
-        "score-away": "0",
-        "status": "FT",
-        "start-time": ""
-    },
-    {
         "team-home": "Southampton",
-        "team-away": "Leeds United",
-        "score-home": "1",
-        "score-away": "0",
-        "status": "FT",
-        "start-time": ""
-    },
-    {
-        "team-home": "Brentford",
-        "team-away": "Chelsea",
-        "score-home": "0",
+        "team-away": "Brentford",
+        "score-home": "4",
         "score-away": "1",
         "status": "FT",
+        "start-time": ""
+    },
+    {
+        "team-home": "Everton",
+        "team-away": "Leicester City",
+        "score-home": "P",
+        "score-away": "P",
+        "status": "Match",
         "start-time": ""
     }
 ]

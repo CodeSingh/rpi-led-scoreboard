@@ -1,15 +1,15 @@
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
+import requests
 from datetime import datetime
 import time
-import requests
 from .livescore import Livescore
 
-class BBC_EPL_Livescore(Livescore):
+class BBC_LALIGA_Livescore(Livescore):
 
-    ID = "BBC_EPL"
-    NAME = "BBC English Premier League"
-    LIVESCORE_URL = 'https://www.bbc.co.uk/sport/football/premier-league/scores-fixtures/'
+    ID = "BBC_LALIGA"
+    NAME = "BBC Spanish La Liga"
+    LIVESCORE_URL = 'https://www.bbc.co.uk/sport/football/spanish-la-liga/scores-fixtures/'
 
     def __init__(self, team):
         self.team = team

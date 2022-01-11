@@ -5,7 +5,7 @@ from datetime import datetime
 import time
 from .livescore import Livescore
 
-class BBC_EPL_Livescore(Livescore):
+class BBC_FAC_Livescore(Livescore):
 
     ID = "BBC_FAC"
     NAME = "BBC English FA Cup"
