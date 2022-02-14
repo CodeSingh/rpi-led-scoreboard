@@ -1,18 +1,114 @@
 [
     {
-        "team-home": "Southampton",
-        "team-away": "Brentford",
-        "score-home": "4",
-        "score-away": "1",
-        "status": "FT",
-        "start-time": ""
+        "team-home": "Philadelphia Union",
+        "team-away": "Minnesota United FC",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "18:00"
     },
     {
-        "team-home": "Everton",
-        "team-away": "Leicester City",
-        "score-home": "P",
-        "score-away": "P",
-        "status": "Match",
-        "start-time": ""
+        "team-home": "Columbus Crew",
+        "team-away": "Vancouver Whitecaps FC",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "20:30"
+    },
+    {
+        "team-home": "Los Angeles Football Club",
+        "team-away": "Colorado Rapids",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "20:30"
+    },
+    {
+        "team-home": "FC Dallas",
+        "team-away": "Toronto FC",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "22:30"
+    },
+    {
+        "team-home": "Austin FC",
+        "team-away": "FC Cincinnati",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "23:00"
+    },
+    {
+        "team-home": "D.C. United",
+        "team-away": "Charlotte FC",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "23:00"
+    },
+    {
+        "team-home": "Inter Miami CF",
+        "team-away": "Chicago Fire FC",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "23:00"
+    },
+    {
+        "team-home": "San Jose Earthquakes",
+        "team-away": "New York Red Bulls",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "23:00"
+    },
+    {
+        "team-home": "Portland Timbers",
+        "team-away": "New England Revolution",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "00:30"
+    },
+    {
+        "team-home": "Orlando City SC",
+        "team-away": "CF Montr\u00e9al",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "18:00"
+    },
+    {
+        "team-home": "Atlanta United",
+        "team-away": "Sporting Kansas City",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "20:00"
+    },
+    {
+        "team-home": "LA Galaxy",
+        "team-away": "New York City FC",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "22:00"
+    },
+    {
+        "team-home": "Houston Dynamo FC",
+        "team-away": "Real Salt Lake",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "00:00"
+    },
+    {
+        "team-home": "Seattle Sounders FC",
+        "team-away": "Nashville SC",
+        "score-home": "0",
+        "score-away": "0",
+        "status": "",
+        "start-time": "01:00"
     }
 ]
