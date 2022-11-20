@@ -5,11 +5,11 @@ from datetime import datetime
 import time
 from .livescore import Livescore
 
-class BBC_EURO2020_Livescore(Livescore):
+class BBC_WORLDCUP_Livescore(Livescore):
 
-    ID = "BBC_EURO2020"
-    NAME = "BBC Euro 2020"
-    LIVESCORE_URL = 'https://www.bbc.co.uk/sport/football/european-championship/scores-fixtures'
+    ID = "BBC_WORLDCUP"
+    NAME = "BBC World Cup"
+    LIVESCORE_URL = 'https://www.bbc.co.uk/sport/football/world-cup/scores-fixtures'
 
     def __init__(self, team):
         self.team = team
